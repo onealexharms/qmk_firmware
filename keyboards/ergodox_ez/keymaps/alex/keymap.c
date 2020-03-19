@@ -40,45 +40,105 @@ enum layers {
   UTIL 
 };
 
+#define A_PAREN LT(PAREN, KC_A)
+#define RECORD DYN_REC_START1
+#define STOP DYN_REC_STOP
+#define PLAY DYN_REC_PLAY
+#define VOL_UP KC_AUDIO_VOL_UP
+#define NEXT KC_MEDIA_NEXT_TRACK
+#define VOL_DN KC_AUDIO_VOL_DOWN
+#define PAUSE KC_AUDIO_PLAY_PAUSE
+#define TAB_OR_CMD LGUI_T(KC_TAB)
+#define BKSP_OR_CMD RGUI_T(KC_BSPACE)
+#define SPACE KC_SPACE
+#define KC_ESCAPE
+#define TO_NUM // toggle NUM layer
+#define TO_UTIL // toggle UTIL layer
+#define HYPER KC_HYPER
+#define ENTER KC_ENTER
+#define SHIFT_TAB LSFT(KC_TAB)
+#define L_SHIFT KC_LSFT
+#define L_ALT KC_LALT
+#define L_CTRL KC_LCTL
+#define R_SHIFT KC_RSFT
+#define R_ALT KC_RALT
+#define R_CTRL KC_RCTL
+#define SEMICOLON KC_SCOLON
+
+
+//_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                               |_______________|_______________|___________|_______________|_______________|_______________|_______________
+// 
+//_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                               |_______________|_______________|___________|_______________|_______________|_______________|_______________
+//
+//_______________|_______________|_______________|_______________|_______________|_______________|               |                                               |               |_______________|___________|_______________|_______________|_______________|_______________
+//
+//_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                               |_______________|_______________|___________|_______________|_______________|_______________|_______________
+//
+//_______________|_______________|_______________|_______________|_______________|_______________|               |                                               |               |_______________|___________|_______________|_______________|_______________|_______________
+//                                                        
+//_______________|_______________|_______________|_______________|_______________|               |_______________|                                               |_______________|               |___________|_______________|_______________|_______________|_______________
+//
+//
+//                                                                                              |_______________|_______________|                |_______________|_______________|
+//
+//                                                                                                              |_______________|                |_______________|
+//
+//                                                                              |_______________|_______________|_______________|                |_______________|_______________|___________|
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+
   [KEYB] = LAYOUT_ergodox_pretty(
-    KC_TRANSPARENT,      KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT,      KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           TG(NUM),                                        TG(UTIL),       KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_TRANSPARENT,
-    KC_LCTL,             LT(PAREN,KC_A), KC_S,           KC_D,           KC_F,           KC_G,                                                                           KC_H,           KC_J,           KC_K,           KC_L,           KC_SCOLON,      KC_QUOTE,
-    KC_LSFT,             KC_Z,           KC_X,           KC_C,           KC_C,           KC_V,           KC_HYPR,                                        KC_B,           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_RSFT,
-    KC_LALT,             DYN_REC_START1, DYN_REC_STOP,   KC_LEFT,        KC_RIGHT,                                                                                                       KC_UP,          KC_DOWN,        KC_TRANSPARENT, DYN_MACRO_PLAY1,KC_RALT,
-                                                                                                    LSFT(KC_TAB),   KC_TRANSPARENT, KC_AUDIO_VOL_UP,KC_MEDIA_NEXT_TRACK, KC_TRANSPARENT, KC_AUDIO_VOL_DOWN,
-                                                                                         KC_ENTER,       LGUI_T(KC_TAB),         KC_ESCAPE,      KC_MEDIA_PLAY_PAUSE,RGUI_T(KC_BSPACE),      KC_SPACE
+//_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
+       _______,        _______,        _______,        _______,        _______,        _______,        _______,                                                      _______,        _______,       _______,         _______,        _______,        _______,       _______,
+//_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
+       _______,          KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,         TO_NUM,                                                      TO_UTIL,            KC_Y,          KC_U,            KC_I,           KC_O,           KC_P,       _______,
+//_______________|_______________|_______________|_______________|_______________|_______________|               |                                               |               |_______________|_______________|_______________|_______________|_______________|_______________
+       L_CTRL,        A_PAREN,           KC_S,           KC_D,           KC_F,           KC_G,                                                                                          KC_H,          KC_J,            KC_K,           KC_L,       SEMICOLON,      KC_QUOTE,
+//_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
+      L_SHIFT,           KC_Z,           KC_X,           KC_C,           KC_C,           KC_V,          HYPER,                                                         KC_B,            KC_N,          KC_M,        KC_COMMA,         KC_DOT,        KC_SLASH,       R_SHIFT,
+//_______________|_______________|_______________|_______________|_______________|_______________|               |                                               |               |_______________|_______________|_______________|_______________|_______________|_______________
+        L_ALT,         RECORD,           STOP,        KC_LEFT,       KC_RIGHT,                                                                                                                        KC_UP,         KC_DOWN,        _______,            PLAY,         R_ALT,
+//_______________|_______________|_______________|_______________|_______________|               |_______________|                                               |_______________|               |_______________|_______________|_______________|_______________|_______________
+//
+                                                                                                    SHIFT_TAB,        _______,                       VOL_UP,            NEXT,    
+//                                                                                               |_______________|_______________|               |_______________|_______________|
+                                                                                                                      _______,                       VOL_DN,
+//                                                                               |               |               |_______________|               |_______________|               |
+                                                                                      ENTER,        TAB_OR_CMD,        ESCAPE,                        PAUSE,        BKSP_OR_TAB,      SPACE
+//                                                                               |_______________|_______________|_______________|               |_______________|_______________|_______________|
   ),
+
   [NUM] = LAYOUT_ergodox_pretty(
-    KC_ESCAPE,      KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,
-    KC_TRANSPARENT, KC_EXLM,        KC_AT,          KC_LCBR,        KC_RCBR,        KC_PIPE,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_7,           KC_8,           KC_9,           KC_ASTR,        KC_F12,
-    KC_TRANSPARENT, KC_HASH,        KC_DLR,         KC_LPRN,        KC_RPRN,        KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_4,           KC_5,           KC_6,           KC_PLUS,        KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_PERC,        KC_CIRC,        KC_LBRACKET,    KC_RBRACKET,    KC_TILD,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_1,           KC_2,           KC_3,           KC_BSLASH,      KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_DOT,         KC_0,           KC_EQUAL,       KC_TRANSPARENT,
-                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_0
+    _______,   KC_F1,  KC_F2,    KC_F3,    KC_F4,    KC_F5,   _______,                       _______,   KC_F6,    KC_F7,    KC_F8,   KC_F9,    KC_F10,    KC_F11,
+    _______, KC_EXLM,  KC_AT,  KC_LCBR,  KC_RCBR,  KC_PIPE,   _______,                       _______, _______,     KC_7,     KC_8,    KC_9,   KC_ASTR,    KC_F12,
+    _______, KC_HASH, KC_DLR,  KC_LPRN,  KC_RPRN,  _______,                                           _______,     KC_4,     KC_5,    KC_6,   KC_PLUS,   _______,
+    _______, KC_PERC, C_CIRC,  KC_LBRC,  KC_RBRC,  KC_TILD,   _______,                       _______, _______,     KC_1,     KC_2,    KC_3,   KC_BSLS,   _______,
+    _______, _______, _______, _______,  _______,                                                               _______,   KC_DOT,    KC_0,  KC_EQUAL,   _______,
+                                                        _______, _______,                 _______, _______,
+                                                                 _______,                 _______,
+                                               _______, _______, _______,                 _______, _______,  KC_0
   ),
+
   [PAREN] = LAYOUT_ergodox_pretty(
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_LPRN,        KC_RPRN,        KC_LBRACKET,    KC_RBRACKET,    KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_LBRACKET,    KC_RBRACKET,    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_LCBR,        KC_RCBR,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
+    _______, _______, _______, _______, _______, _______, _______,                                 _______, _______,   _______,   _______,  _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, _______,                                 _______, _______,   KC_LPRN,   KC_RPRN,  KC_LBRC, KC_RBRC, _______,
+    _______, _______, _______, _______, _______, _______,                                                   _______,   KC_LBRC,   KC_RBRC,  _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, _______,                                 _______, _______,   KC_LCBR,   KC_RCBR,  _______, _______, _______,
+    _______, _______, _______, _______, _______,                                                                       _______,   _______,  _______, _______, _______,
+                                                     _______, _______,                       _______, _______,
+                                                              _______,                       _______,
+                                            _______, _______, _______,                       _______, _______, _______
   ),
   [UTIL] = LAYOUT_ergodox_pretty(
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, RESET,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_MS_UP,       KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT,    KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_MEDIA_PLAY_PAUSE,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_MEDIA_PREV_TRACK,KC_MEDIA_NEXT_TRACK,KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_MS_BTN1,     KC_MS_BTN2,                                                                                                     KC_AUDIO_VOL_UP,KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,  KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                                    RGB_MOD,        HSV_172_255_255,KC_TRANSPARENT, RGB_SLD,
-                                                                                                                    HSV_86_255_128, KC_TRANSPARENT,
-                                                                                    RGB_VAD,        RGB_VAI,        HSV_27_255_255, KC_TRANSPARENT, RGB_HUD,        KC_KP_0
+    _______, _______,    _______,     _______,     _______, _______, _______,                    _______, _______, _______, _______, _______, _______, RESET,
+    _______, _______,    _______,    KC_MS_UP,     _______, _______, _______,                    _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, KC_MS_LEFT,  KC_MS_DOWN, KC_MS_RIGHT, _______,                                      _______, _______, _______, _______, _______, PAUSE,
+    _______, _______,    _______,     _______,     _______, _______, _______,                    _______, _______, _______, KC_MEDIA_PREV_TRACK, NEXT,  _______, _______,
+    _______, _______,    _______,  KC_MS_BTN1,  KC_MS_BTN2,                                                VOL_UP,  VOL_DN, KC_AUDIO_MUTE, _______, _______,
+                                                     RGB_MOD, HSV_172_255_255,             _______, RGB_SLD,
+                                                               HSV_86_255_128,             _______,
+                                          RGB_VAD,  RGB_VAI,   HSV_27_255_255,             _______, RGB_HUD, KC_KP_0
   ),
 };
 
