@@ -93,7 +93,7 @@ enum layers {
 #define Z_HYPER HYPR_T(KC_Z)
 
 // punctuation
-#define SEMICOLON KC_SCOLON
+#define RCTL_SEMICOLON RCTL_T(KC_SCOLON)
 #define SPACE KC_SPACE
 #define PERIOD KC_DOT
 #define ENTER KC_ENTER
@@ -118,11 +118,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [BASE] = LAYOUT_ergodox_pretty(
 //_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
-       TO(BASE)  ,   TO(COLORS)  ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                    TO(BASE)   ,     TO(NUM)   ,   TO(PARENS)  ,  TO(SYMBOLS)  ,   TO(MOUSE)   ,  OSL(ARROWS)   ,     BLANK     ,
+       TO(BASE)  ,   TO(COLORS)  ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                    TO(BASE)   ,     TO(NUM)   ,   TO(PARENS)  ,  TO(SYMBOLS)  ,   TO(MOUSE)   ,  OSL(ARROWS)  ,     BLANK     ,
 //_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
       _______    ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,  MACRO1_PLAY  ,                                                                                    _______    ,       KC_Y    ,       KC_U    ,       KC_I    ,       KC_O    ,       KC_P    ,     KC_0      ,
 //_______________|_______________|_______________|_______________|_______________|_______________|               |                                                                               |               |_______________|_______________|_______________|_______________|_______________|_______________
-      L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,    D_ARROWS   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                       KC_H    ,    J_ESCAPE   ,       KC_K    ,       KC_L    ,   SEMICOLON   ,    KC_QUOTE   ,
+      L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,    D_ARROWS   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                       KC_H    ,    J_ESCAPE   ,       KC_K    ,       KC_L    , RCTL_SEMICOLON,    KC_QUOTE   ,
 //_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
       L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,  MACRO1_PLAY  ,                                                                                      KC_B     ,       KC_N    ,       KC_M    ,    KC_COMMA   ,      PERIOD   ,    KC_SLASH   ,    R_SHIFT    ,
 //_______________|_______________|_______________|_______________|_______________|_______________|               |                                                                               |               |_______________|_______________|_______________|_______________|_______________|_______________
