@@ -27,8 +27,7 @@
 #define NO_BSLS_ALT KC_EQUAL
 
 enum custom_keycodes {
-  RGB_START = EZ_SAFE_RANGE,
-  RED_ON,
+  RED_ON = EZ_SAFE_RANGE,
   ORANGE_ON,
   YELLOW_ON,
   GREEN_ON,
@@ -80,7 +79,7 @@ enum layers {
 #define R_ALT KC_RALT
 #define R_CTRL KC_RCTL
 
-// letter overrides
+// letters that switch layers
 #define A_PARENS LT(PARENS, KC_A)
 #define S_MOUSE LT(MOUSE, KC_S)
 #define D_ARROWS LT(ARROWS, KC_D)
@@ -285,78 +284,36 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 rgblight_config_t rgblight_config;
-bool disable_layer_color = 0;
+bool disable_layer_color = false;
 
 bool suspended = false;
 
-// allows custom code on a keyup or keydown event
-// specifically handling custom keycodes that set colors for the backlight
+bool light_me_up(keyrecord_t *record, int red, int green, int blue) {
+  
+  if (record->event.pressed) {
+    #ifdef RGBLIGHT_ENABLE
+      rgblight_enable();
+      rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);
+      rgblight_setrgb(red, green, blue);
+    #endif
+  } 
+  return false;
+}
+ 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case RGB_START:
-      if (record->event.pressed) {
-        rgblight_mode(1);
-      }
-      return false;
-    case TOGGLE_LAYER_COLOR:
-      if (record->event.pressed) {
-        disable_layer_color ^= 1;
-      }
-      return false;
     case RED_ON:
-      if (record->event.pressed) {
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_enable();
-          rgblight_mode(1);
-          rgblight_setrgb(RED);
-        #endif
-      }
-      return false;
+      return light_me_up(record, RED);
     case ORANGE_ON:
-      if (record->event.pressed) {
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_enable();
-          rgblight_mode(1);
-          rgblight_setrgb(ORANGE);
-        #endif
-      }
-      return false;
+      return light_me_up(record, ORANGE);
     case YELLOW_ON:
-      if (record->event.pressed) {
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_enable();
-          rgblight_mode(1);
-          rgblight_setrgb(YELLOW);
-        #endif
-      }
-      return false;
+      return light_me_up(record, YELLOW);
     case GREEN_ON:
-      if (record->event.pressed) {
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_enable();
-          rgblight_mode(1);
-          rgblight_setrgb(GREEN);
-        #endif
-      }
-      return false;
+      return light_me_up(record, GREEN);
     case BLUE_ON:
-      if (record->event.pressed) {
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_enable();
-          rgblight_mode(1);
-          rgblight_setrgb(BLUE);
-        #endif
-      }
-      return false;
+      return light_me_up(record, BLUE);
     case PURPLE_ON:
-      if (record->event.pressed) {
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_enable();
-          rgblight_mode(1);
-          rgblight_setrgb(PURPLE);
-        #endif
-      }
-      return false;
+      return light_me_up(record, PURPLE);
   }
   return true;
 }
