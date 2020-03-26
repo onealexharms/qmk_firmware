@@ -42,7 +42,7 @@ PARENS,
 MOUSE,
 ARROWS,
 SYMBOLS,
-NUM,
+NUMBERS,
 ESCAPE_LAYER,
 COLORS
 };
@@ -84,7 +84,7 @@ COLORS
 #define S_MOUSE LT(MOUSE, KC_S)
 #define D_ARROWS LT(ARROWS, KC_D)
 #define F_SYMBOLS LT(SYMBOLS, KC_F)
-#define G_NUMBERS LT(NUM, KC_G)
+#define G_NUMBERS LT(NUMBERS, KC_G)
 #define J_ESCAPE LT(ESCAPE_LAYER, KC_J)
 #define Z_HYPER HYPR_T(KC_Z)
 
@@ -122,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [BASE] = LAYOUT_ergodox_pretty(
 //_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
-      TO(BASE)   ,   TO(COLORS)  ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                    TO(BASE)   ,     TO(NUM)   ,   TO(PARENS)  ,  TO(SYMBOLS)  ,   TO(MOUSE)   ,   MO(ARROWS)  ,     BLANK     ,
+      TO(BASE)   ,   TO(COLORS)  ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                    TO(BASE)   ,     TO(NUMBERS)   ,   TO(PARENS)  ,  TO(SYMBOLS)  ,   TO(MOUSE)   ,   MO(ARROWS)  ,     BLANK     ,
 //_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
       _______    ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,  MACRO1_PLAY  ,                                                                                    _______    ,       KC_Y    ,       KC_U    ,       KC_I    ,       KC_O    ,       KC_P    ,     KC_0      ,
 //_______________|_______________|_______________|_______________|_______________|_______________|               |                                                                               |               |_______________|_______________|_______________|_______________|_______________|_______________
@@ -141,7 +141,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                                                                                               |_______________|_______________|_______________|               |_______________|_______________|_______________|
   ),
 
-  [NUM] = LAYOUT_ergodox_pretty(
+  [NUMBERS] = LAYOUT_ergodox_pretty(
 //_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
        _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    LOCKED     ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,    DIVIDE     ,
 //_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
@@ -341,7 +341,7 @@ uint32_t layer_state_set_user(uint32_t state) {
         ergodox_right_led_1_on();
         ergodox_right_led_2_on();
         break;
-      case NUM:
+      case NUMBERS:
         ergodox_right_led_1_on();
         ergodox_right_led_3_on();
         break;
