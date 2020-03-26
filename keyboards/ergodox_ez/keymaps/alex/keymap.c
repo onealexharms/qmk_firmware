@@ -27,25 +27,25 @@
 #define NO_BSLS_ALT KC_EQUAL
 
 enum custom_keycodes {
-  RED_ON = EZ_SAFE_RANGE,
-  ORANGE_ON,
-  YELLOW_ON,
-  GREEN_ON,
-  BLUE_ON,
-  PURPLE_ON,
-  SLEEP
+RED_ON = EZ_SAFE_RANGE,
+ORANGE_ON,
+YELLOW_ON,
+GREEN_ON,
+BLUE_ON,
+PURPLE_ON,
+SLEEP
 };
 
 enum layers {
-  BASE,
-  NUM,
-  PARENS,
-  MOUSE,
-  ARROWS,
-  SYMBOLS,
-  COLORS,
-  ESCAPE_LAYER,
-  EMPTY
+BASE,
+NUM,
+PARENS,
+MOUSE,
+ARROWS,
+SYMBOLS,
+COLORS,
+ESCAPE_LAYER,
+EMPTY
 };
 
 // utility things 
@@ -284,22 +284,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 rgblight_config_t rgblight_config;
-bool disable_layer_color = false;
 
-bool suspended = false;
-
+void light_color(int red, int green, int blue) {
+  #ifdef RGBLIGHT_ENABLE
+    rgblight_enable();
+    rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);
+    rgblight_setrgb(red, green, blue);
+  #endif
+}
+ 
 bool light_me_up(keyrecord_t *record, int red, int green, int blue) {
   
   if (record->event.pressed) {
-    #ifdef RGBLIGHT_ENABLE
-      rgblight_enable();
-      rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);
-      rgblight_setrgb(red, green, blue);
-    #endif
-  } 
-  return false;
+    light_color(red, green, blue);  
+    return false;
+  }
+  return true;
 }
- 
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case RED_ON:
