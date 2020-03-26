@@ -38,14 +38,13 @@ SLEEP
 
 enum layers {
 BASE,
-NUM,
 PARENS,
 MOUSE,
 ARROWS,
 SYMBOLS,
-COLORS,
+NUM,
 ESCAPE_LAYER,
-EMPTY
+COLORS
 };
 
 // utility things 
@@ -329,28 +328,33 @@ uint32_t layer_state_set_user(uint32_t state) {
     ergodox_right_led_2_off();
     ergodox_right_led_3_off();
     switch (layer) {
-      case 1:
+      case BASE:
+        ergodox_right_led_1_off();
+        ergodox_right_led_2_off();
+        ergodox_right_led_3_off();
+        break;
+      case PARENS:
         ergodox_right_led_1_on();
         break;
-      case 2:
+      case MOUSE:
         ergodox_right_led_2_on();
         break;
-      case 3:
+      case ARROWS:
         ergodox_right_led_3_on();
         break;
-      case 4:
+      case SYMBOLS:
         ergodox_right_led_1_on();
         ergodox_right_led_2_on();
         break;
-      case 5:
+      case NUM:
         ergodox_right_led_1_on();
         ergodox_right_led_3_on();
         break;
-      case 6:
+      case ESCAPE_LAYER:
         ergodox_right_led_2_on();
         ergodox_right_led_3_on();
         break;
-      case 7:
+      case COLORS:
         ergodox_right_led_1_on();
         ergodox_right_led_2_on();
         ergodox_right_led_3_on();
