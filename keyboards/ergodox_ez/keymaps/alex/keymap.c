@@ -112,7 +112,7 @@ COLORS
 
 // colors
 #define RED 255,0,0
-#define ORANGE 255,125,0 
+#define ORANGE 255,50,0
 #define YELLOW 255,200,0
 #define GREEN 0,200,0
 #define BLUE 0,0,255
