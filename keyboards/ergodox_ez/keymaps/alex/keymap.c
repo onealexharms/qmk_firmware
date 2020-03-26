@@ -40,7 +40,7 @@ enum layers {
 BASE,
 PARENS,
 MOUSE,
-ARROWS,
+D_PAD,
 SYMBOLS,
 NUMBERS,
 ESCAPE_LAYER,
@@ -82,7 +82,7 @@ COLORS
 // letters that switch layers
 #define A_PARENS LT(PARENS, KC_A)
 #define S_MOUSE LT(MOUSE, KC_S)
-#define D_ARROWS LT(ARROWS, KC_D)
+#define D_D_PAD LT(D_PAD, KC_D)
 #define F_SYMBOLS LT(SYMBOLS, KC_F)
 #define G_NUMBERS LT(NUMBERS, KC_G)
 #define J_ESCAPE LT(ESCAPE_LAYER, KC_J)
@@ -122,11 +122,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [BASE] = LAYOUT_ergodox_pretty(
 //_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
-      TO(BASE)   ,   TO(COLORS)  ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                    TO(BASE)   ,     TO(NUMBERS)   ,   TO(PARENS)  ,  TO(SYMBOLS)  ,   TO(MOUSE)   ,   MO(ARROWS)  ,     BLANK     ,
+      TO(BASE)   ,   TO(COLORS)  ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                    TO(BASE)   ,     TO(NUMBERS)   ,   TO(PARENS)  ,  TO(SYMBOLS)  ,   TO(MOUSE)   ,   MO(D_PAD)  ,     BLANK     ,
 //_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
       _______    ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,  MACRO1_PLAY  ,                                                                                    _______    ,       KC_Y    ,       KC_U    ,       KC_I    ,       KC_O    ,       KC_P    ,     KC_0      ,
 //_______________|_______________|_______________|_______________|_______________|_______________|               |                                                                               |               |_______________|_______________|_______________|_______________|_______________|_______________
-      L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,    D_ARROWS   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                       KC_H    ,    J_ESCAPE   ,       KC_K    ,       KC_L    , RCTL_SEMICOLON,    KC_QUOTE   ,
+      L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,    D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                       KC_H    ,    J_ESCAPE   ,       KC_K    ,       KC_L    , RCTL_SEMICOLON,    KC_QUOTE   ,
 //_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
       L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,  MACRO1_PLAY  ,                                                                                   _______     ,       KC_N    ,       KC_M    ,    KC_COMMA   ,      PERIOD   ,    KC_SLASH   ,    R_SHIFT    ,
 //_______________|_______________|_______________|_______________|_______________|_______________|               |                                                                               |               |_______________|_______________|_______________|_______________|_______________|_______________
@@ -221,7 +221,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                                                                                               |_______________|_______________|_______________|               |_______________|_______________|_______________|
   ),
 
-  [ARROWS] = LAYOUT_ergodox_pretty(
+  [D_PAD] = LAYOUT_ergodox_pretty(
 //_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
        _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,   LOCKED      ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     KC_POWER  ,
 //_______________|_______________|_______________|_______________|_______________|_______________|_______________|                                                                               |_______________|_______________|_______________|_______________|_______________|_______________|_______________
@@ -327,32 +327,40 @@ uint32_t layer_state_set_user(uint32_t state) {
 
     switch (layer) {
       case BASE:
+        light_color(YELLOW);
         break;
       case PARENS:
         ergodox_right_led_1_on();
+        light_color(RED);
         break;
       case MOUSE:
         ergodox_right_led_2_on();
+        light_color(ORANGE);
         break;
-      case ARROWS:
+      case D_PAD:
         ergodox_right_led_3_on();
+        light_color(YELLOW);
         break;
       case SYMBOLS:
         ergodox_right_led_1_on();
         ergodox_right_led_2_on();
+        light_color(GREEN);
         break;
       case NUMBERS:
         ergodox_right_led_1_on();
         ergodox_right_led_3_on();
+        light_color(BLUE);
         break;
       case ESCAPE_LAYER:
         ergodox_right_led_2_on();
         ergodox_right_led_3_on();
+        light_color(PURPLE);
         break;
       case COLORS:
         ergodox_right_led_1_on();
         ergodox_right_led_2_on();
         ergodox_right_led_3_on();
+        rgblight_mode(RGBLIGHT_MODE_RAINBOW_SWIRL);
         break;
       default:
         break;
