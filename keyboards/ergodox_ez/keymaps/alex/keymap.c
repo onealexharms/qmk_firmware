@@ -320,7 +320,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
-/*
 uint32_t layer_state_set_user(uint32_t state) {
 
     uint8_t layer = biton32(state);
@@ -332,27 +331,12 @@ uint32_t layer_state_set_user(uint32_t state) {
     switch (layer) {
       case 1:
         ergodox_right_led_1_on();
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_enable();
-          rgblight_mode(1);
-          rgblight_sethsv(172,255,255);
-        #endif
         break;
       case 2:
         ergodox_right_led_2_on();
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_enable();
-          rgblight_mode(1);
-          rgblight_sethsv(86,255,128);
-        #endif
         break;
       case 3:
         ergodox_right_led_3_on();
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_enable();
-          rgblight_mode(1);
-          rgblight_sethsv(27,255,255);
-        #endif
         break;
       case 4:
         ergodox_right_led_1_on();
@@ -374,52 +358,8 @@ uint32_t layer_state_set_user(uint32_t state) {
       default:
         break;
     }
-    switch (layer) {
-      case 0:
-        if(!disable_layer_color) {
-          rgblight_enable_noeeprom();
-          rgblight_mode_noeeprom(1);
-          rgblight_sethsv_noeeprom(25,255,255);
-        }
-        break;
-      case 1:
-        if(!disable_layer_color) {
-          rgblight_enable_noeeprom();
-          rgblight_mode_noeeprom(1);
-          rgblight_sethsv_noeeprom(71,208,182);
-        }
-        break;
-      case 2:
-        if(!disable_layer_color) {
-          rgblight_enable_noeeprom();
-          rgblight_mode_noeeprom(1);
-          rgblight_sethsv_noeeprom(151,237,242);
-        }
-        break;
-      case 3:
-        if(!disable_layer_color) {
-          rgblight_enable_noeeprom();
-          rgblight_mode_noeeprom(1);
-          rgblight_sethsv_noeeprom(195,183,222);
-        }
-        break;
-      default:
-        if(!disable_layer_color) {
-          rgblight_config.raw = eeconfig_read_rgblight();
-          if(rgblight_config.enable == true) {
-            rgblight_enable();
-            rgblight_mode(rgblight_config.mode);
-            rgblight_sethsv(rgblight_config.hue, rgblight_config.sat, rgblight_config.val);
-          }
-          else {
-            rgblight_disable();
-          }
-        }
-        break;
-    }
     return state;
 };
-*/
 
 void keyboard_post_init_user(void) {
   layer_state_set_user(layer_state);
