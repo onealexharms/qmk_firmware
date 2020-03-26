@@ -323,15 +323,10 @@ uint32_t layer_state_set_user(uint32_t state) {
 
     uint8_t layer = biton32(state);
 
-    ergodox_board_led_off();
-    ergodox_right_led_1_off();
-    ergodox_right_led_2_off();
-    ergodox_right_led_3_off();
+    ergodox_led_all_off();
+
     switch (layer) {
       case BASE:
-        ergodox_right_led_1_off();
-        ergodox_right_led_2_off();
-        ergodox_right_led_3_off();
         break;
       case PARENS:
         ergodox_right_led_1_on();
