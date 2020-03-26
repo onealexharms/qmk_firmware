@@ -293,7 +293,7 @@ void light_color(int red, int green, int blue) {
   #endif
 }
  
-bool light_me_up(keyrecord_t *record, int red, int green, int blue) {
+bool light_on_key_press(keyrecord_t *record, int red, int green, int blue) {
   
   if (record->event.pressed) {
     light_color(red, green, blue);  
@@ -305,17 +305,17 @@ bool light_me_up(keyrecord_t *record, int red, int green, int blue) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case RED_ON:
-      return light_me_up(record, RED);
+      return light_on_key_press(record, RED);
     case ORANGE_ON:
-      return light_me_up(record, ORANGE);
+      return light_on_key_press(record, ORANGE);
     case YELLOW_ON:
-      return light_me_up(record, YELLOW);
+      return light_on_key_press(record, YELLOW);
     case GREEN_ON:
-      return light_me_up(record, GREEN);
+      return light_on_key_press(record, GREEN);
     case BLUE_ON:
-      return light_me_up(record, BLUE);
+      return light_on_key_press(record, BLUE);
     case PURPLE_ON:
-      return light_me_up(record, PURPLE);
+      return light_on_key_press(record, PURPLE);
   }
   return true;
 }
