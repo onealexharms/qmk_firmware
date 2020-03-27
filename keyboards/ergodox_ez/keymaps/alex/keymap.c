@@ -72,9 +72,9 @@ COLORS
 #define BKSP_OR_CMD RGUI_T(KC_BSPACE)
 #define HYPER KC_HYPR
 #define SHIFT_TAB LSFT(KC_TAB)
-#define L_SHIFT KC_LSFT
+#define L_SHIFT MT(MOD_LSFT, KC_CAPS)
 #define L_ALT KC_LALT
-#define L_CTRL KC_LCTL
+#define L_CTRL MT(MOD_LCTL, KC_ESC)
 #define R_SHIFT KC_RSFT
 #define R_ALT KC_RALT
 #define R_CTRL KC_RCTL
