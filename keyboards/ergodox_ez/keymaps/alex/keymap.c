@@ -34,6 +34,12 @@
 #define BLANK KC_NO // DON'T ALLOW TRANSPARENCY
 #define BROKEN KC_NO 
 
+// some stuff to prevent mod tap keys from
+// doing other than what i am trying to do
+#define IGNORE_MOD_TAP_INTERRUPT
+#undef PERMISSIVE_HOLD
+#undef PREVENT_STUCK_MODIFIERS
+
 // macro
 #define MACRO1_REC DYN_REC_START1
 #define MACRO2_REC DYN_REC_START2
