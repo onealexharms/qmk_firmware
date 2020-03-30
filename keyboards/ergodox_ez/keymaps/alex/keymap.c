@@ -26,26 +26,8 @@
 #define NO_PIPE_ALT KC_GRAVE
 #define NO_BSLS_ALT KC_EQUAL
 
-enum custom_keycodes {
-RED_ON = EZ_SAFE_RANGE,
-ORANGE_ON,
-YELLOW_ON,
-GREEN_ON,
-BLUE_ON,
-PURPLE_ON,
-SLEEP
-};
-
-enum layers {
-BASE,
-PARENS,
-MOUSE,
-D_PAD,
-SYMBOLS,
-NUMBERS,
-ESCAPE_LAYER,
-COLORS
-};
+// above is out of the box
+// below is me
 
 // utility things 
 #define LOCKED KC_TRANSPARENT // KEEP TRANPARENT
@@ -132,7 +114,7 @@ COLORS
 #define NUMBER_KEYS LAYOUT_ergodox_pretty(\
       TO(BASE)   ,   TO(COLORS)  ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                    TO(BASE)   ,   TO(NUMBERS) ,  TO(PARENS)   ,  TO(SYMBOLS)  ,   TO(MOUSE)   ,   MO(D_PAD)  ,     BLANK     ,\
       _______    ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,  MACRO1_PLAY  ,                                                                                    _______    ,       KC_Y    ,       KC_U    ,       KC_I    ,       KC_O    ,       KC_P    ,    KC_0      ,\
-      L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,    D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                       KC_H    ,    J_ESCAPE   ,       KC_K    ,       KC_L    , RCTL_SEMICOLON,    KC_QUOTE   ,\
+      L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,     D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                       KC_H    ,    J_ESCAPE   ,       KC_K    ,       KC_L    ,RCTL_SEMICOLON,    KC_QUOTE   ,\
       L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,  MACRO1_PLAY  ,                                                                                   _______     ,       KC_N    ,       KC_M    ,    KC_COMMA   ,      PERIOD   ,    KC_SLASH   ,   R_SHIFT    ,\
       L_ALT      ,    _______    ,   MACRO_STOP  ,   MACRO2_REC  ,   MACRO1_REC  ,                                                                                                                                                     _______   ,     _______   ,     _______   ,    _______    ,   BROKEN     ,\
                                                                                                                      SHIFT_TAB   ,    _______    ,                    _______    ,   _______     ,              \
@@ -141,7 +123,7 @@ COLORS
 )
 
 #define PAREN_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,     _______   ,   LOCKED      ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     BLANK     ,\
+       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,     _______   ,     LOCKED    ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     BLANK     ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,     _______   ,    L_PAREN    ,    R_PAREN    ,     _______   ,     _______   ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                   LESS_THAN   ,    L_BRACKET  ,    R_BRACKET  ,  GREATER_THAN ,     _______   ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,     _______   ,    L_CURLY    ,    R_CURLY    ,     _______   ,     _______   ,     _______   ,\
@@ -152,7 +134,7 @@ COLORS
 )
 
 #define SYMBOL_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,   LOCKED      ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     BLANK     ,\
+       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,     LOCKED    ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     BLANK     ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,    KC_GRAVE   , KC_AMPERSAND  ,  KC_ASTERISK  ,    KC_PIPE    ,   KC_BSLS     ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                    KC_TILDE   ,   KC_DOLLAR   ,   KC_PERCENT  , KC_CIRCUMFLEX ,    MINUS      ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                    _______    ,      MINUS    ,   KC_EXCLAIM  ,     KC_AT     ,    KC_HASH    , KC_UNDERSCORE ,     _______   ,\
@@ -163,7 +145,7 @@ COLORS
 )
 
 #define MOUSE_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,   LOCKED      ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,    LOCKED     ,    LOCKED     ,     RESET     ,\
+       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,     _______   ,     LOCKED    ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,    LOCKED     ,    LOCKED     ,     RESET     ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                    _______    ,     _______   ,     _______   ,    _______    ,    _______    ,   KC_MS_BTN2  ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                   KC_MS_LEFT  ,   KC_MS_DOWN  ,    KC_MS_UP   ,  KC_MS_RIGHT  ,   KC_MS_BTN1  ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                    _______    ,     _______   ,     _______   ,   _______     ,    _______    ,     _______   ,     _______   ,\
@@ -174,7 +156,7 @@ COLORS
 )
 
 #define D_PAD_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,   LOCKED      ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     KC_POWER  ,\
+       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     LOCKED    ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     KC_POWER  ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                     KC_LEFT   ,     KC_DOWN   ,     KC_UP     ,     KC_RIGHT  ,    _______    ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,     _______   ,\
@@ -205,6 +187,27 @@ COLORS
                                                                                                                                      _______    ,                      _______   ,                               \
                                                                                                       _______   ,     _______   ,    _______    ,                      _______   ,    _______    ,     SPACE     \
 )
+
+enum custom_keycodes {
+RED_ON = EZ_SAFE_RANGE,
+ORANGE_ON,
+YELLOW_ON,
+GREEN_ON,
+BLUE_ON,
+PURPLE_ON,
+SLEEP
+};
+
+enum layers {
+BASE,
+PARENS,
+MOUSE,
+D_PAD,
+SYMBOLS,
+NUMBERS,
+ESCAPE_LAYER,
+COLORS
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = ALPHA_KEYS,
