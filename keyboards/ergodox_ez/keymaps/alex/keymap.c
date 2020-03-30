@@ -72,7 +72,7 @@ COLORS
 #define BKSP_OR_CMD RGUI_T(KC_BSPACE)
 #define HYPER KC_HYPR
 #define SHIFT_TAB LSFT(KC_TAB)
-#define L_SHIFT MT(MOD_LSFT, KC_CAPS)
+#define L_SHIFT KC_LSFT
 #define L_ALT KC_LALT
 #define L_CTRL MT(MOD_LCTL, KC_ESC)
 #define R_SHIFT KC_RSFT
@@ -124,7 +124,7 @@ COLORS
       L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,     D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                     KC_H     ,     J_ESCAPE   ,       KC_K    ,       KC_L    , RCTL_SEMICOLON,    KC_QUOTE   , \
       L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,  MACRO1_PLAY  ,                                                                                   _______     ,     KC_N     ,        KC_M    ,    KC_COMMA   ,      PERIOD   ,    KC_SLASH   ,   R_SHIFT     , \
       L_ALT      ,    _______    ,   MACRO_STOP  ,   MACRO2_REC  ,   MACRO1_REC  ,                                                                                                                                                     _______   ,     _______   ,     _______   ,    _______    ,   BROKEN      , \
-                                                                                                                     SHIFT_TAB   ,    _______    ,                    _______    ,   _______     ,               \
+                                                                                                                     SHIFT_TAB   ,    KC_CAPS    ,                    _______    ,   _______     ,               \
                                                                                                                                       _______    ,                    _______    ,                               \
                                                                                                        ENTER     ,  TAB_OR_CMD   ,   KC_ESCAPE   ,                    TO(BASE)   ,  BKSP_OR_CMD  ,    SPACE      \
 )
