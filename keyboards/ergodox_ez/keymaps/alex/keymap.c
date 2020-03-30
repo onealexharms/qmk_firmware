@@ -141,7 +141,7 @@ COLORS
 )
 
 #define PAREN_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,   LOCKED      ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     BLANK     ,\
+       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,     _______   ,   LOCKED      ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     BLANK     ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,     _______   ,    L_PAREN    ,    R_PAREN    ,     _______   ,     _______   ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                   LESS_THAN   ,    L_BRACKET  ,    R_BRACKET  ,  GREATER_THAN ,     _______   ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,     _______   ,    L_CURLY    ,    R_CURLY    ,     _______   ,     _______   ,     _______   ,\
