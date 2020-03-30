@@ -111,7 +111,7 @@
 #define PURPLE 75,0,200
 
 #define ALPHA_KEYS LAYOUT_ergodox_pretty(\
-      TO(ALPHA)  ,   TO(COLORS)  ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                   TO(ALPHA)   ,  TO(NUMBERS)  ,    TO(PARENS)  ,  TO(SYMBOLS)  ,   TO(MOUSE)   ,    MO(D_PAD)  ,     BLANK     , \
+      TO(ALPHA)  ,    _______    ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                   TO(ALPHA)   ,  TO(NUMBERS)  ,    TO(PARENS)  ,  TO(SYMBOLS)  ,   TO(MOUSE)   ,    MO(D_PAD)  ,     BLANK     , \
       _______    ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,    _______    ,                                                                                   _______     ,     KC_Y      ,        KC_U    ,       KC_I    ,        KC_O   ,        KC_P   ,   NOTHING     , \
       L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,     D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                    H_NUMBERS  ,     J_ESCAPE   ,     K_D_PAD   ,     L_MOUSE   , COLON_PARENS  ,    R_CTRL     , \
       L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,    _______    ,                                                                                   _______     ,     KC_N      ,        KC_M    ,    KC_COMMA   ,      PERIOD   ,     KC_SLASH  ,   R_SHIFT     , \
@@ -176,17 +176,6 @@
                                                                                                        _______   ,     _______   ,    _______    ,                     _______   ,    _______    ,     SPACE     \
 )
 
-#define COLOR_KEYS LAYOUT_ergodox_pretty(\
-      _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,                                                                                    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,\
-      _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,                                                                                    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,\
-      _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,                                                                                                                    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,\
-      RED_ON     ,   ORANGE_ON   ,   YELLOW_ON   ,   GREEN_ON    ,    BLUE_ON    ,   PURPLE_ON   ,    _______    ,                                                                                    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,\
-      _______    ,   _______     ,    _______    ,    _______    ,    _______    ,                                                                                                                                                    _______    ,     _______   ,     _______   ,    _______    ,    BROKEN     ,\
-                                                                                                                      _______   ,    _______    ,                      _______   ,    _______    ,               \
-                                                                                                                                     _______    ,                      _______   ,                               \
-                                                                                                      _______   ,     _______   ,    _______    ,                      _______   ,    _______    ,     SPACE     \
-)
-
 #define ESCAPE_LAYER_KEYS LAYOUT_ergodox_pretty(\
       _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,                                                                                    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,\
       _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,                                                                                    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,\
@@ -216,7 +205,6 @@ D_PAD,
 SYMBOLS,
 NUMBERS,
 ESCAPE_LAYER,
-COLORS
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -226,7 +214,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [SYMBOLS] = SYMBOL_KEYS,
   [MOUSE] = MOUSE_KEYS,
   [D_PAD] = D_PAD_KEYS,
-  [COLORS] = COLOR_KEYS,
   [ESCAPE_LAYER] = ESCAPE_LAYER_KEYS,
 };
 
@@ -304,12 +291,6 @@ uint32_t layer_state_set_user(uint32_t state) {
         ergodox_right_led_2_on();
         ergodox_right_led_3_on();
         light_color(PURPLE);
-        break;
-      case COLORS:
-        ergodox_right_led_1_on();
-        ergodox_right_led_2_on();
-        ergodox_right_led_3_on();
-        rgblight_mode(RGBLIGHT_MODE_RAINBOW_SWIRL);
         break;
       default:
         break;
