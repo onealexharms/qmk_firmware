@@ -70,6 +70,7 @@
 
 // letters that switch layers
 #define A_PARENS LT(PARENS, KC_A)
+#define COLON_PARENS LT(PARENS, KC_SCOLON)
 #define S_MOUSE LT(MOUSE, KC_S)
 #define D_D_PAD LT(D_PAD, KC_D)
 #define F_SYMBOLS LT(SYMBOLS, KC_F)
@@ -78,7 +79,6 @@
 #define Z_HYPER HYPR_T(KC_Z)
 
 // punctuation
-#define RCTL_SEMICOLON RCTL_T(KC_SCOLON)
 #define SPACE KC_SPACE
 #define PERIOD KC_DOT
 #define ENTER KC_ENTER
@@ -108,11 +108,11 @@
 #define PURPLE 75,0,200
 
 #define ALPHA_KEYS LAYOUT_ergodox_pretty(\
-      TO(ALPHA)  ,   TO(COLORS)  ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                   TO(ALPHA)   ,  TO(NUMBERS)  ,   TO(PARENS)  ,  TO(SYMBOLS)  ,   TO(MOUSE)   ,   MO(D_PAD)   ,     BLANK     , \
-      _______    ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,    _______    ,                                                                                   _______     ,     KC_Y     ,        KC_U    ,       KC_I    ,       KC_O    ,       KC_P    ,    KC_0       , \
-      L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,     D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                     KC_H     ,     J_ESCAPE   ,       KC_K    ,       KC_L    , RCTL_SEMICOLON,    _______    , \
-      L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,    _______    ,                                                                                   _______     ,     KC_N     ,        KC_M    ,    KC_COMMA   ,      PERIOD   ,    KC_SLASH   ,   R_SHIFT     , \
-      NOTHING    ,    NOTHING    ,       L_ALT   ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,    NOTHING    ,   BROKEN      , \
+      TO(ALPHA)  ,   TO(COLORS)  ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                   TO(ALPHA)   ,  TO(NUMBERS)  ,   TO(PARENS)  ,  TO(SYMBOLS)  ,   TO(MOUSE)   ,    MO(D_PAD)  ,     BLANK     , \
+      _______    ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,    _______    ,                                                                                   _______     ,     KC_Y     ,        KC_U    ,       KC_I    ,       KC_O    ,        KC_P   ,   NOTHING     , \
+      L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,     D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                     KC_H     ,     J_ESCAPE   ,       KC_K    ,       KC_L    , COLON_PARENS  ,    R_CTRL     , \
+      L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,    _______    ,                                                                                   _______     ,     KC_N     ,        KC_M    ,    KC_COMMA   ,      PERIOD   ,     KC_SLASH  ,   R_SHIFT     , \
+      NOTHING    ,    NOTHING    ,       L_ALT   ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,     NOTHING   ,   BROKEN      , \
                                                                                                                        KC_CAPS   ,     TO(ALPHA) ,                    TO(ALPHA)  ,      KC_0     ,               \
                                                                                                                                        _______   ,                    _______    ,                               \
                                                                                                        ENTER     ,  TAB_OR_CMD   ,     _______   ,                    _______    ,  BKSP_OR_CMD  ,    SPACE      \
