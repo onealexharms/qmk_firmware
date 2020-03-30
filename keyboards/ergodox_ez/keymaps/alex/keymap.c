@@ -141,7 +141,7 @@
 )
 
 #define SYMBOL_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,     LOCKED    ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     BLANK     ,\
+       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     LOCKED    ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     BLANK     ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,    KC_GRAVE   , KC_AMPERSAND  ,  KC_ASTERISK  ,     KC_PIPE   ,   KC_BSLS     ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                    KC_TILDE   ,   KC_DOLLAR   ,   KC_PERCENT  , KC_CIRCUMFLEX ,    MINUS      ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                    _______    ,      MINUS    ,   KC_EXCLAIM  ,     KC_AT     ,     KC_HASH   , KC_UNDERSCORE ,     _______   ,\
