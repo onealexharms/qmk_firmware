@@ -118,14 +118,14 @@
 )
 
 #define NUMBER_KEYS LAYOUT_ergodox_pretty(\
-      TO(BASE)   ,   TO(COLORS)  ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                    TO(BASE)   ,   TO(NUMBERS) ,  TO(PARENS)   ,  TO(SYMBOLS)  ,   TO(MOUSE)   ,   MO(D_PAD)  ,     BLANK     ,\
-      _______    ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,    _______    ,                                                                                    _______    ,       KC_Y    ,       KC_U    ,       KC_I    ,       KC_O    ,       KC_P    ,    KC_0      ,\
-      L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,     D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                       KC_H    ,    J_ESCAPE   ,       KC_K    ,       KC_L    ,RCTL_SEMICOLON,    KC_QUOTE   ,\
-      L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,    _______    ,                                                                                   _______     ,       KC_N    ,       KC_M    ,    KC_COMMA   ,      PERIOD   ,    KC_SLASH   ,   R_SHIFT    ,\
-      L_ALT      ,    _______    ,     _______   ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,    _______    ,   BROKEN     ,\
-                                                                                                                     SHIFT_TAB   ,    _______    ,                    _______    ,   _______     ,              \
-                                                                                                                                      _______    ,                    _______    ,                              \
-                                                                                                       ENTER     ,  TAB_OR_CMD   ,   KC_ESCAPE   ,                    TO(BASE)   ,  BKSP_OR_CMD  ,    SPACE     \
+       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    LOCKED     ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,    DIVIDE     ,\
+       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    _______    ,                                                                                    _______    ,     _______   ,        KC_7   ,      KC_8     ,     KC_9      ,    _______    ,    MULTIPLY   ,\
+       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,                                                                                                                     _______   ,        KC_4   ,      KC_5     ,     KC_6      ,    _______    ,    MINUS      ,\
+       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    _______    ,                                                                                    EQUAL      ,      KC_0     ,        KC_1   ,      KC_2     ,     KC_3      ,    _______    ,    PLUS       ,\
+       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                                                                                     DECIMAL   ,     _______   ,     KC_0      ,    _______    ,    BROKEN     ,\
+                                                                                                                       _______   ,     _______   ,                     _______   ,     _______   ,               \
+                                                                                                                                       _______   ,                     _______   ,                               \
+                                                                                                       ENTER     ,  TAB_OR_CMD   ,   KC_ESCAPE   ,                    TO(BASE)   ,  BKSP_OR_CMD  ,    SPACE      \
 )
 
 #define PAREN_KEYS LAYOUT_ergodox_pretty(\
