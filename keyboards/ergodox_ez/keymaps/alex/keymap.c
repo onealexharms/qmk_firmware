@@ -44,10 +44,10 @@
 #define SHIFT_TAB LSFT(KC_TAB)
 #define L_SHIFT KC_LSFT
 #define L_ALT KC_LALT
-#define L_CTRL MT(MOD_LCTL, KC_ESC)
+#define L_CTRL_ESC MT(MOD_LCTL, KC_ESC)
 #define R_SHIFT KC_RSFT
 #define R_ALT KC_RALT
-#define R_CTRL MT(MOD_RCTL, KC_ESC)
+#define R_CTRL_ESC MT(MOD_RCTL, KC_ESC)
 
 // letters that switch layers
 #define A_PARENS LT(PARENS, KC_A)
@@ -94,7 +94,7 @@
 #define ALPHA_KEYS LAYOUT_ergodox_pretty(\
       XXXXXXXX   ,    XXXXXXXX   ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,    XXXXXXXX   ,      XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,   XXXXXXXX    , \
       XXXXXXXX   ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,     KC_Y      ,        KC_U    ,       KC_I    ,        KC_O   ,        KC_P   ,   XXXXXXXX    , \
-      L_CTRL     ,    A_PARENS   ,     S_ALPHA   ,     D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                    H_NUMBERS  ,     J_SYMBOLS  ,     K_D_PAD   ,     L_ALPHA   , COLON_PARENS  ,    R_CTRL     , \
+      L_CTRL_ESC ,    A_PARENS   ,     S_ALPHA   ,     D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                    H_NUMBERS  ,     J_SYMBOLS  ,     K_D_PAD   ,     L_ALPHA   , COLON_PARENS  ,    R_CTRL_ESC , \
       L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,     KC_N      ,        KC_M    ,    KC_COMMA   ,      PERIOD   ,     KC_SLASH  ,   R_SHIFT     , \
       XXXXXXXX   ,    XXXXXXXX   ,       L_ALT   ,     _______   ,     _______   ,                                                                                                                                                      _______   ,     _______   ,       R_ALT   ,      XXXXXXXX ,    XXXXXXXX   , \
                                                                                                                        KC_CAPS   ,     TO(ALPHA) ,                    TO(ALPHA)  ,      KC_0     ,               \
