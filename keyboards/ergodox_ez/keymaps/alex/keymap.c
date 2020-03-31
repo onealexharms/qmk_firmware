@@ -114,15 +114,15 @@
 )
 
 #define PAREN_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
-       _______   ,     RED_ON    ,     GREEN_ON  ,     PREV      ,     NEXT      ,     VOL_UP    ,     _______   ,                                                                                     _______   ,     _______   ,    L_PAREN    ,    R_PAREN    ,     KC_QUOTE  , RSFT(KC_QUOTE),     _______   ,\
+       XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
+       XXXXXXXX  ,     RED_ON    ,     GREEN_ON  ,     PREV      ,     NEXT      ,     VOL_UP    ,    XXXXXXXX   ,                                                                                     _______   ,     _______   ,    L_PAREN    ,    R_PAREN    ,     KC_QUOTE  , RSFT(KC_QUOTE),     _______   ,\
        _______   ,     ORANGE_ON ,     BLUE_ON   ,     MUTE      ,     PLAY_PAUSE,     VOL_DOWN  ,                                                                                                                   LESS_THAN   ,    L_BRACKET  ,    R_BRACKET  ,  GREATER_THAN ,     _______   ,     _______   ,\
-       _______   ,     YELLOW_ON ,     PURPLE_ON ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,     _______   ,    L_CURLY    ,    R_CURLY    ,     _______   ,     _______   ,     _______   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,   XXXXXXXX    ,     XXXXXXXX  ,\
-                                                                                                                       _______   ,     _______   ,                     _______   ,     _______   ,               \
-                                                                                                                                       _______   ,                     _______   ,                               \
-                                                                                                       _______   ,     _______   ,     _______   ,                     _______   ,     _______   ,     SPACE     \
-
+       _______   ,     YELLOW_ON ,     PURPLE_ON ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                     _______   ,     _______   ,    L_CURLY    ,    R_CURLY    ,     _______   ,     _______   ,     _______   ,\
+       XXXXXXXX  ,     XXXXXXXX  ,     _______   ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,   XXXXXXXX    ,     XXXXXXXX  ,\
+                                                                                                                       _______   ,     TO(ALPHA) ,                     TO(ALPHA) ,     KC_0      ,               \
+                                                                                                                                       XXXXXXXX  ,                     XXXXXXXX  ,                               \
+                                                                                                       ENTER     ,   TAB_OR_CMD  ,     XXXXXXXX  ,                     XXXXXXXX  ,   BKSP_OR_CMD ,     SPACE     \
+)
 
 #define SYMBOL_KEYS LAYOUT_ergodox_pretty(\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
