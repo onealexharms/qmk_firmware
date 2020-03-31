@@ -30,6 +30,7 @@
 #define MUTE KC_AUDIO_MUTE
 #define PLAY_PAUSE KC_MEDIA_PLAY_PAUSE
 
+// mouse
 #define RIGHT_CLICK KC_MS_BTN2
 #define LEFT_CLICK KC_MS_BTN1
 #define MOUSE_LEFT KC_MS_LEFT
@@ -83,6 +84,20 @@
 #define EQUAL KC_EQUAL
 #define DECIMAL KC_DOT
 
+// other symbols
+#define AMPERSAND KC_AMPERSAND
+#define DOLLAR KC_DOLLAR
+#define ASTERISK KC_ASTERISK
+#define UNDERSCORE KC_UNDERSCORE
+#define AT_SIGN KC_AT
+#define PERCENT KC_PERCENT
+#define CARET KC_CIRCUMFLEX
+#define PIPE KC_PIPE
+#define BACKSLASH KC_BSLS
+#define BANG KC_EXCLAIM
+#define BACKTICK KC_GRAVE
+#define TILDE KC_TILDE
+
 // colors
 #define RED 255,0,0
 #define ORANGE 255,50,0
@@ -105,9 +120,9 @@
 #define NUMBER_KEYS LAYOUT_ergodox_pretty(\
        XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
        XXXXXXXX  ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,        KC_7   ,      KC_8     ,     KC_9      ,    DIVIDE     ,    XXXXXXXX   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,                                                                                                                     PLUS      ,        KC_4   ,      KC_5     ,     KC_6      ,    MULTIPLY   ,    _______    ,\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     MINUS     ,        KC_1   ,      KC_2     ,     KC_3      ,    EQUAL      ,    _______    ,\
-       XXXXXXXX  ,     XXXXXXXX  ,     _______   ,     _______   ,    _______    ,                                                                                                                                                     _______   ,     _______   ,     DECIMAL   ,    XXXXXXXX   ,    XXXXXXXX   ,\
+       L_CTRL_ESC,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,                                                                                                                     PLUS      ,        KC_4   ,      KC_5     ,     KC_6      ,    MULTIPLY   ,    R_CTRL_ESC ,\
+       L_SHIFT   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     MINUS     ,        KC_1   ,      KC_2     ,     KC_3      ,    EQUAL      ,    R_SHIFT    ,\
+       XXXXXXXX  ,     XXXXXXXX  ,     L_ALT     ,     _______   ,    _______    ,                                                                                                                                                     _______   ,     _______   ,     DECIMAL   ,    XXXXXXXX   ,    XXXXXXXX   ,\
                                                                                                                        _______   ,     TO(ALPHA) ,                     TO(ALPHA) ,     KC_0      ,               \
                                                                                                                                        XXXXXXXX  ,                     XXXXXXXX  ,                               \
                                                                                                        ENTER     ,  TAB_OR_CMD   ,     XXXXXXXX  ,                     XXXXXXXX  ,  BKSP_OR_CMD  ,     SPACE     \
@@ -115,24 +130,24 @@
 
 #define PAREN_KEYS LAYOUT_ergodox_pretty(\
        XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
-       XXXXXXXX  ,     RED_ON    ,     GREEN_ON  ,     PREV      ,     NEXT      ,     VOL_UP    ,    XXXXXXXX   ,                                                                                     _______   ,     _______   ,    L_PAREN    ,    R_PAREN    ,     KC_QUOTE  , RSFT(KC_QUOTE),     _______   ,\
-       _______   ,     ORANGE_ON ,     BLUE_ON   ,     MUTE      ,     PLAY_PAUSE,     VOL_DOWN  ,                                                                                                                   LESS_THAN   ,    L_BRACKET  ,    R_BRACKET  ,  GREATER_THAN ,     _______   ,     _______   ,\
-       _______   ,     YELLOW_ON ,     PURPLE_ON ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                     _______   ,     _______   ,    L_CURLY    ,    R_CURLY    ,     _______   ,     _______   ,     _______   ,\
-       XXXXXXXX  ,     XXXXXXXX  ,     _______   ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,   XXXXXXXX    ,     XXXXXXXX  ,\
+       XXXXXXXX  ,     RED_ON    ,     GREEN_ON  ,     PREV      ,     NEXT      ,     VOL_UP    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,    L_PAREN    ,    R_PAREN    ,     KC_QUOTE  , RSFT(KC_QUOTE),    XXXXXXXX   ,\
+       L_CTRL_ESC,     ORANGE_ON ,     BLUE_ON   ,     MUTE      ,     PLAY_PAUSE,     VOL_DOWN  ,                                                                                                                   LESS_THAN   ,    L_BRACKET  ,    R_BRACKET  ,  GREATER_THAN ,     _______   ,    R_CTRL_ESC ,\
+       L_SHIFT   ,     YELLOW_ON ,     PURPLE_ON ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,    L_CURLY    ,    R_CURLY    ,     _______   ,     _______   ,    R_SHIFT    ,\
+       XXXXXXXX  ,     XXXXXXXX  ,     L_ALT     ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     R_ALT     ,   XXXXXXXX    ,     XXXXXXXX  ,\
                                                                                                                        _______   ,     TO(ALPHA) ,                     TO(ALPHA) ,     KC_0      ,               \
                                                                                                                                        XXXXXXXX  ,                     XXXXXXXX  ,                               \
                                                                                                        ENTER     ,   TAB_OR_CMD  ,     XXXXXXXX  ,                     XXXXXXXX  ,   BKSP_OR_CMD ,     SPACE     \
 )
 
 #define SYMBOL_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,    KC_GRAVE   , KC_AMPERSAND  ,  KC_ASTERISK  ,     KC_PIPE   ,   KC_BSLS     ,     _______   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                    KC_TILDE   ,   KC_DOLLAR   ,   KC_PERCENT  , KC_CIRCUMFLEX ,    MINUS      ,     _______   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                    _______    ,      MINUS    ,   KC_EXCLAIM  ,     KC_AT     ,     KC_HASH   , KC_UNDERSCORE ,     _______   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,   XXXXXXXX    ,     XXXXXXXX  ,\
-                                                                                                                       _______   ,     _______   ,                     _______   ,     _______   ,               \
-                                                                                                                                       _______   ,                     _______   ,                               \
-                                                                                                       _______   ,     _______   ,     _______   ,                     _______   ,     _______   ,     SPACE     \
+       XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
+       XXXXXXXX  ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    KC_GRAVE   , KC_AMPERSAND  ,  KC_ASTERISK  ,    KC_TILDE   ,   KC_BSLS     ,    XXXXXXXX   ,\
+       L_CTRL_ESC,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                     MINUS     ,   KC_DOLLAR   ,   KC_PERCENT  , KC_CIRCUMFLEX ,    PIPE       ,    R_CTRL_ESC ,\
+       L_SHIFT   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX  ,                                                                                     XXXXXXXX   ,  KC_UNDERSCORE,   KC_EXCLAIM  ,     KC_AT     ,     KC_HASH   ,   _______     ,    R_SHIFT    ,\
+       XXXXXXXX  ,    XXXXXXXX   ,     L_ALT     ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,   XXXXXXXX    ,     XXXXXXXX  ,\
+                                                                                                                       _______   ,     _______   ,                     TO(ALPHA) ,     KC_0      ,               \
+                                                                                                                                       _______   ,                     XXXXXXXX  ,                               \
+                                                                                                       ENTER    ,     TAB_OR_CMD ,    XXXXXXXX   ,                     XXXXXXXX  ,   BKSP_OR_CMD ,     SPACE     \
 )
 
 #define D_PAD_KEYS LAYOUT_ergodox_pretty(\
