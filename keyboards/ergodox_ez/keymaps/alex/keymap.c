@@ -190,6 +190,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 rgblight_config_t rgblight_config;
+bool capslock_is_on = false;
 
 void light_color(int red, int green, int blue) {
   #ifdef RGBLIGHT_ENABLE
@@ -200,7 +201,6 @@ void light_color(int red, int green, int blue) {
 }
  
 bool light_on_key_press(keyrecord_t *record, int red, int green, int blue) {
-  
   if (record->event.pressed) {
     light_color(red, green, blue);  
     return false;
@@ -208,8 +208,22 @@ bool light_on_key_press(keyrecord_t *record, int red, int green, int blue) {
   return true;
 }
 
+void toggle_capslock_indicator(keyrecord_t *record) {
+  if (capslock_is_on) {
+    ergodox_right_led_1_on();
+  } else {
+    ergodox_right_led_1_off();
+  }
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
+    case KC_CAPS:
+      if (record->event.pressed) {
+        capslock_is_on = !capslock_is_on;
+        toggle_capslock_indicator(record);
+      }
+      return true;
     case RED_ON:
       return light_on_key_press(record, RED);
     case ORANGE_ON:
@@ -237,21 +251,21 @@ uint32_t layer_state_set_user(uint32_t state) {
         light_color(YELLOW);
         break;
       case PARENS:
-        ergodox_right_led_1_on();
+//      ergodox_right_led_1_on();
         light_color(PURPLE);
         break;
       case D_PAD:
-        ergodox_right_led_3_on();
+//      ergodox_right_led_3_on();
         light_color(ORANGE);
         break;
       case SYMBOLS:
-        ergodox_right_led_1_on();
-        ergodox_right_led_2_on();
+//      ergodox_right_led_1_on();
+//      ergodox_right_led_2_on();
         light_color(GREEN);
         break;
       case NUMBERS:
-        ergodox_right_led_1_on();
-        ergodox_right_led_3_on();
+//      ergodox_right_led_1_on();
+//      ergodox_right_led_3_on();
         light_color(BLUE);
         break;
       default:
