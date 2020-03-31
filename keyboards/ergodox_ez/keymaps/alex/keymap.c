@@ -31,7 +31,6 @@
 
 // utility things 
 #define XXXXXXXX KC_NO
-#define PERMISSIVE_HOLD
 
 // macro
 #define MACRO1_REC DYN_REC_START1
@@ -165,7 +164,7 @@
 )
 
 enum custom_keycodes {
-RED_ON = EZ_SAFE_RANGE,
+RED_ON = SAFE_RANGE,
 ORANGE_ON,
 YELLOW_ON,
 GREEN_ON,
