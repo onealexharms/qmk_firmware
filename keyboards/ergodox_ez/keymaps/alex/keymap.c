@@ -103,14 +103,14 @@
 )
 
 #define NUMBER_KEYS LAYOUT_ergodox_pretty(\
-       XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    _______    ,\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    _______    ,                                                                                    _______    ,     _______   ,        KC_7   ,      KC_8     ,     KC_9      ,    MULTIPLY   ,    _______    ,\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,                                                                                                                     PLUS      ,        KC_4   ,      KC_5     ,     KC_6      ,    DIVIDE     ,    _______    ,\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    _______    ,                                                                                    EQUAL      ,     MINUS     ,        KC_1   ,      KC_2     ,     KC_3      ,    _______    ,    _______    ,\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                                                                                     _______   ,     _______   ,     DECIMAL   ,    XXXXXXXX   ,    XXXXXXXX   ,\
-                                                                                                                       _______   ,     _______   ,                     _______   ,     _______   ,               \
-                                                                                                                                       _______   ,                     _______   ,                               \
-                                                                                                       ENTER     ,  TAB_OR_CMD   ,     _______   ,                     _______   ,  BKSP_OR_CMD  ,     KC_0      \
+       XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
+       XXXXXXXX  ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,        KC_7   ,      KC_8     ,     KC_9      ,    DIVIDE     ,    XXXXXXXX   ,\
+       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,                                                                                                                     PLUS      ,        KC_4   ,      KC_5     ,     KC_6      ,    MULTIPLY   ,    _______    ,\
+       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     MINUS     ,        KC_1   ,      KC_2     ,     KC_3      ,    EQUAL      ,    _______    ,\
+       XXXXXXXX  ,     XXXXXXXX  ,     _______   ,     _______   ,    _______    ,                                                                                                                                                     _______   ,     _______   ,     DECIMAL   ,    XXXXXXXX   ,    XXXXXXXX   ,\
+                                                                                                                       _______   ,     TO(ALPHA) ,                     TO(ALPHA) ,     KC_0      ,               \
+                                                                                                                                       XXXXXXXX  ,                     XXXXXXXX  ,                               \
+                                                                                                       ENTER     ,  TAB_OR_CMD   ,     XXXXXXXX  ,                     XXXXXXXX  ,  BKSP_OR_CMD  ,     SPACE     \
 )
 
 #define PAREN_KEYS LAYOUT_ergodox_pretty(\
@@ -122,7 +122,7 @@
                                                                                                                        _______   ,     _______   ,                     _______   ,     _______   ,               \
                                                                                                                                        _______   ,                     _______   ,                               \
                                                                                                        _______   ,     _______   ,     _______   ,                     _______   ,     _______   ,     SPACE     \
-)
+
 
 #define SYMBOL_KEYS LAYOUT_ergodox_pretty(\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
