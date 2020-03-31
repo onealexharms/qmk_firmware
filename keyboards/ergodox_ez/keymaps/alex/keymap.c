@@ -191,6 +191,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 rgblight_config_t rgblight_config;
 bool capslock_is_on = false;
+bool KEY_NEEDS_HANDLING = true;
+bool KEY_IS_HANDLED = false;
 
 void light_color(int red, int green, int blue) {
   #ifdef RGBLIGHT_ENABLE
@@ -200,14 +202,6 @@ void light_color(int red, int green, int blue) {
   #endif
 }
  
-bool light_on_key_press(keyrecord_t *record, int red, int green, int blue) {
-  if (record->event.pressed) {
-    light_color(red, green, blue);  
-    return false;
-  }
-  return true;
-}
-
 void toggle_capslock_indicator(keyrecord_t *record) {
   if (capslock_is_on) {
     ergodox_right_led_1_on();
@@ -225,47 +219,46 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return true;
     case RED_ON:
-      return light_on_key_press(record, RED);
+      light_color(RED);
+      return KEY_IS_HANDLED;
     case ORANGE_ON:
-      return light_on_key_press(record, ORANGE);
+      light_color(ORANGE);
+      return KEY_IS_HANDLED;
     case YELLOW_ON:
-      return light_on_key_press(record, YELLOW);
+      light_color(YELLOW);
+      return KEY_IS_HANDLED;
     case GREEN_ON:
-      return light_on_key_press(record, GREEN);
+      light_color(GREEN);
+      return KEY_IS_HANDLED;
     case BLUE_ON:
-      return light_on_key_press(record, BLUE);
+      light_color(BLUE);
+      return KEY_IS_HANDLED;
     case PURPLE_ON:
-      return light_on_key_press(record, PURPLE);
+      light_color(PURPLE);
+      return KEY_IS_HANDLED;
+    default:
+      return KEY_NEEDS_HANDLING;
   }
-  return true;
 }
 
 uint32_t layer_state_set_user(uint32_t state) {
 
     uint8_t layer = biton32(state);
 
-    ergodox_led_all_off();
-
     switch (layer) {
       case ALPHA:
         light_color(YELLOW);
         break;
       case PARENS:
-//      ergodox_right_led_1_on();
         light_color(PURPLE);
         break;
       case D_PAD:
-//      ergodox_right_led_3_on();
         light_color(ORANGE);
         break;
       case SYMBOLS:
-//      ergodox_right_led_1_on();
-//      ergodox_right_led_2_on();
         light_color(GREEN);
         break;
       case NUMBERS:
-//      ergodox_right_led_1_on();
-//      ergodox_right_led_3_on();
         light_color(BLUE);
         break;
       default:
