@@ -67,7 +67,7 @@
 #define F_SYMBOLS LT(SYMBOLS, KC_F)
 #define G_NUMBERS LT(NUMBERS, KC_G)
 #define H_NUMBERS LT(NUMBERS, KC_H)
-#define J_ESCAPE LT(ESCAPE_LAYER, KC_J)
+#define J_SYMBOLS LT(SYMBOLS, KC_J)
 #define K_D_PAD LT(D_PAD, KC_K)
 #define L_MOUSE LT(MOUSE, KC_L)
 #define COLON_PARENS LT(PARENS, KC_SCOLON)
@@ -105,7 +105,7 @@
 #define ALPHA_KEYS LAYOUT_ergodox_pretty(\
       XXXXXXXX   ,    XXXXXXXX   ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,    XXXXXXXX   ,      XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,   XXXXXXXX    , \
       XXXXXXXX   ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,     KC_Y      ,        KC_U    ,       KC_I    ,        KC_O   ,        KC_P   ,   XXXXXXXX    , \
-      L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,     D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                    H_NUMBERS  ,     J_ESCAPE   ,     K_D_PAD   ,     L_MOUSE   , COLON_PARENS  ,    R_CTRL     , \
+      L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,     D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                    H_NUMBERS  ,     J_SYMBOLS  ,     K_D_PAD   ,     L_MOUSE   , COLON_PARENS  ,    R_CTRL     , \
       L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,     KC_N      ,        KC_M    ,    KC_COMMA   ,      PERIOD   ,     KC_SLASH  ,   R_SHIFT     , \
       XXXXXXXX   ,    XXXXXXXX   ,       L_ALT   ,     _______   ,     _______   ,                                                                                                                                                      _______   ,     _______   ,       R_ALT   ,      XXXXXXXX ,    XXXXXXXX   , \
                                                                                                                        KC_CAPS   ,     TO(ALPHA) ,                    TO(ALPHA)  ,      KC_0     ,               \
@@ -168,17 +168,6 @@
                                                                                                        _______   ,     _______   ,    _______    ,                     _______   ,    _______    ,     SPACE     \
 )
 
-#define ESCAPE_LAYER_KEYS LAYOUT_ergodox_pretty(\
-      _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,                                                                                    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,\
-      _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,                                                                                    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,\
-      _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,                                                                                                                    _______    ,    _______    ,   KC_ESCAPE   ,    _______    ,    _______    ,    _______    ,\
-      _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,                                                                                    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,    _______    ,\
-      _______    ,    _______    ,    _______    ,    _______    ,    _______    ,                                                                                                                                                    _______    ,    _______    ,     _______   ,    _______    ,    XXXXXXXX   ,\
-                                                                                                                      _______   ,    _______    ,                      _______   ,    _______    ,               \
-                                                                                                                                     _______    ,                      _______   ,                               \
-                                                                                                      _______   ,     _______   ,    _______    ,                      _______   ,    _______    ,     SPACE     \
-)
-
 enum custom_keycodes {
 RED_ON = EZ_SAFE_RANGE,
 ORANGE_ON,
@@ -186,7 +175,6 @@ YELLOW_ON,
 GREEN_ON,
 BLUE_ON,
 PURPLE_ON,
-SLEEP
 };
 
 enum layers {
@@ -196,7 +184,6 @@ MOUSE,
 D_PAD,
 SYMBOLS,
 NUMBERS,
-ESCAPE_LAYER,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -206,7 +193,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [SYMBOLS] = SYMBOL_KEYS,
   [MOUSE] = MOUSE_KEYS,
   [D_PAD] = D_PAD_KEYS,
-  [ESCAPE_LAYER] = ESCAPE_LAYER_KEYS,
 };
 
 
@@ -278,11 +264,6 @@ uint32_t layer_state_set_user(uint32_t state) {
         ergodox_right_led_1_on();
         ergodox_right_led_3_on();
         light_color(BLUE);
-        break;
-      case ESCAPE_LAYER:
-        ergodox_right_led_2_on();
-        ergodox_right_led_3_on();
-        light_color(PURPLE);
         break;
       default:
         break;
