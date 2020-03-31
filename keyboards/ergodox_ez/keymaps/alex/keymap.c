@@ -65,7 +65,7 @@
 #define L_CTRL MT(MOD_LCTL, KC_ESC)
 #define R_SHIFT KC_RSFT
 #define R_ALT KC_RALT
-#define R_CTRL KC_RCTL
+#define R_CTRL MT(MOD_RCTL, KC_ESC)
 
 // letters that switch layers
 #define A_PARENS LT(PARENS, KC_A)
@@ -116,8 +116,8 @@
       L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,     KC_N      ,        KC_M    ,    KC_COMMA   ,      PERIOD   ,     KC_SLASH  ,   R_SHIFT     , \
       XXXXXXXX   ,    XXXXXXXX   ,       L_ALT   ,     _______   ,     _______   ,                                                                                                                                                      _______   ,     _______   ,       R_ALT   ,      XXXXXXXX ,    XXXXXXXX   , \
                                                                                                                        KC_CAPS   ,     TO(ALPHA) ,                    TO(ALPHA)  ,      KC_0     ,               \
-                                                                                                                                       _______   ,                    _______    ,                               \
-                                                                                                       ENTER     ,  TAB_OR_CMD   ,     _______   ,                    _______    ,  BKSP_OR_CMD  ,    SPACE      \
+                                                                                                                                       XXXXXXXX  ,                    XXXXXXXX   ,                               \
+                                                                                                       ENTER     ,  TAB_OR_CMD   ,     XXXXXXXX  ,                    XXXXXXXX   ,  BKSP_OR_CMD  ,    SPACE      \
 )
 
 #define NUMBER_KEYS LAYOUT_ergodox_pretty(\
