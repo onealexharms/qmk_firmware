@@ -48,6 +48,13 @@
 #define MUTE KC_AUDIO_MUTE
 #define PLAY_PAUSE KC_MEDIA_PLAY_PAUSE
 
+#define RIGHT_CLICK KC_MS_BTN2
+#define LEFT_CLICK KC_MS_BTN1
+#define MOUSE_LEFT KC_MS_LEFT
+#define MOUSE_RIGHT KC_MS_RIGHT
+#define MOUSE_UP KC_MS_UP
+#define MOUSE_DOWN KC_MS_DOWN
+
 // control keys
 #define TAB_OR_CMD LGUI_T(KC_TAB)
 #define BKSP_OR_CMD RGUI_T(KC_BSPACE)
@@ -62,14 +69,14 @@
 
 // letters that switch layers
 #define A_PARENS LT(PARENS, KC_A)
-#define S_MOUSE LT(MOUSE, KC_S)
+#define S_ALPHA LT(ALPHA, KC_S)
 #define D_D_PAD LT(D_PAD, KC_D)
 #define F_SYMBOLS LT(SYMBOLS, KC_F)
 #define G_NUMBERS LT(NUMBERS, KC_G)
 #define H_NUMBERS LT(NUMBERS, KC_H)
 #define J_SYMBOLS LT(SYMBOLS, KC_J)
 #define K_D_PAD LT(D_PAD, KC_K)
-#define L_MOUSE LT(MOUSE, KC_L)
+#define L_ALPHA LT(ALPHA, KC_L)
 #define COLON_PARENS LT(PARENS, KC_SCOLON)
 #define Z_HYPER HYPR_T(KC_Z)
 
@@ -105,7 +112,7 @@
 #define ALPHA_KEYS LAYOUT_ergodox_pretty(\
       XXXXXXXX   ,    XXXXXXXX   ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,    XXXXXXXX   ,      XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,   XXXXXXXX    , \
       XXXXXXXX   ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,     KC_Y      ,        KC_U    ,       KC_I    ,        KC_O   ,        KC_P   ,   XXXXXXXX    , \
-      L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,     D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                    H_NUMBERS  ,     J_SYMBOLS  ,     K_D_PAD   ,     L_MOUSE   , COLON_PARENS  ,    R_CTRL     , \
+      L_CTRL     ,    A_PARENS   ,     S_ALPHA   ,     D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                    H_NUMBERS  ,     J_SYMBOLS  ,     K_D_PAD   ,     L_ALPHA   , COLON_PARENS  ,    R_CTRL     , \
       L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,     KC_N      ,        KC_M    ,    KC_COMMA   ,      PERIOD   ,     KC_SLASH  ,   R_SHIFT     , \
       XXXXXXXX   ,    XXXXXXXX   ,       L_ALT   ,     _______   ,     _______   ,                                                                                                                                                      _______   ,     _______   ,       R_ALT   ,      XXXXXXXX ,    XXXXXXXX   , \
                                                                                                                        KC_CAPS   ,     TO(ALPHA) ,                    TO(ALPHA)  ,      KC_0     ,               \
@@ -146,22 +153,11 @@
                                                                                                        _______   ,     _______   ,     _______   ,                     _______   ,     _______   ,     SPACE     \
 )
 
-#define MOUSE_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,   XXXXXXXX    ,   XXXXXXXX    ,     RESET     ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                    _______    ,     _______   ,     _______   ,    _______    ,    _______    ,   KC_MS_BTN2  ,     _______   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                   KC_MS_LEFT  ,   KC_MS_DOWN  ,    KC_MS_UP   ,  KC_MS_RIGHT  ,   KC_MS_BTN1  ,     _______   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                    _______    ,     _______   ,     _______   ,   _______     ,    _______    ,     _______   ,     _______   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                                                     _______   ,   _______     ,    _______    ,     _______   ,     XXXXXXXX  ,\
-                                                                                                                      _______    ,    _______    ,                     _______   ,    _______   ,                \
-                                                                                                                                      _______    ,                     _______   ,                               \
-                                                                                                      _______    ,    _______    ,    _______    ,                     _______   ,    _______   ,   _______      \
-)
-
 #define D_PAD_KEYS LAYOUT_ergodox_pretty(\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,     KC_POWER  ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,     _______   ,     RESET     ,     _______   ,     _______   ,    _______    ,     _______   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                     KC_LEFT   ,     KC_DOWN   ,     KC_UP     ,     KC_RIGHT  ,    _______    ,     _______   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,     _______   ,\
+       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                     KC_LEFT   ,     KC_DOWN   ,     KC_UP     ,     KC_RIGHT  ,   LEFT_CLICK  ,     _______   ,\
+       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,   MOUSE_LEFT ,   MOUSE_DOWN   ,    MOUSE_UP   ,  MOUSE_RIGHT  ,   RIGHT_CLICK ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,    _______    ,     XXXXXXXX  ,\
                                                                                                                        _______   ,    _______    ,                     _______   ,    _______    ,               \
                                                                                                                                       _______    ,                     _______   ,                               \
@@ -180,7 +176,6 @@ PURPLE_ON,
 enum layers {
 ALPHA,
 PARENS,
-MOUSE,
 D_PAD,
 SYMBOLS,
 NUMBERS,
@@ -191,7 +186,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [NUMBERS] = NUMBER_KEYS,
   [PARENS] = PAREN_KEYS,
   [SYMBOLS] = SYMBOL_KEYS,
-  [MOUSE] = MOUSE_KEYS,
   [D_PAD] = D_PAD_KEYS,
 };
 
@@ -247,13 +241,9 @@ uint32_t layer_state_set_user(uint32_t state) {
         ergodox_right_led_1_on();
         light_color(RED);
         break;
-      case MOUSE:
-        ergodox_right_led_2_on();
-        light_color(ORANGE);
-        break;
       case D_PAD:
         ergodox_right_led_3_on();
-        light_color(YELLOW);
+        light_color(ORANGE);
         break;
       case SYMBOLS:
         ergodox_right_led_1_on();
