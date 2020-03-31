@@ -50,9 +50,9 @@
 
 // media
 #define VOL_UP KC_AUDIO_VOL_UP
-#define NEXT KC_MEDIA_NEXT_TRACK
-#define PREV KC_MEDIA_PREV_TRACK
-#define VOL_DN KC_AUDIO_VOL_DOWN
+#define NEXT KC_MEDIA_FAST_FORWARD
+#define PREV KC_MEDIA_REWIND
+#define VOL_DOWN KC_AUDIO_VOL_DOWN
 #define MUTE KC_AUDIO_MUTE
 #define PLAY_PAUSE KC_MEDIA_PLAY_PAUSE
 
@@ -134,9 +134,9 @@
 
 #define PAREN_KEYS LAYOUT_ergodox_pretty(\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     LOCKED    ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     BLANK     ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,     _______   ,    L_PAREN    ,    R_PAREN    ,     KC_QUOTE  , RSFT(KC_QUOTE),     _______   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                   LESS_THAN   ,    L_BRACKET  ,    R_BRACKET  ,  GREATER_THAN ,     _______   ,     _______   ,\
-       RED_ON    ,     ORANGE_ON ,     YELLOW_ON ,     GREEN_ON  ,     BLUE_ON   ,     PURPLE_ON ,     _______   ,                                                                                     _______   ,     _______   ,    L_CURLY    ,    R_CURLY    ,     _______   ,     _______   ,     _______   ,\
+       _______   ,     RED_ON    ,     GREEN_ON  ,     PREV      ,     NEXT      ,     VOL_UP    ,     _______   ,                                                                                     _______   ,     _______   ,    L_PAREN    ,    R_PAREN    ,     KC_QUOTE  , RSFT(KC_QUOTE),     _______   ,\
+       _______   ,     ORANGE_ON ,     BLUE_ON   ,     MUTE      ,     PLAY_PAUSE,     VOL_DOWN  ,                                                                                                                   LESS_THAN   ,    L_BRACKET  ,    R_BRACKET  ,  GREATER_THAN ,     _______   ,     _______   ,\
+       _______   ,     YELLOW_ON ,     PURPLE_ON ,     GREEN_ON  ,     BLUE_ON   ,     PURPLE_ON ,     _______   ,                                                                                     _______   ,     _______   ,    L_CURLY    ,    R_CURLY    ,     _______   ,     _______   ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,     _______   ,     BROKEN    ,\
                                                                                                                        _______   ,     _______   ,                     _______   ,     _______   ,               \
                                                                                                                                        _______   ,                     _______   ,                               \
