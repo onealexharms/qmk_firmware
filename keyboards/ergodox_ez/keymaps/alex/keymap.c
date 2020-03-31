@@ -30,10 +30,8 @@
 // below is me
 
 // utility things 
-#define LOCKED KC_TRANSPARENT // KEEP TRANPARENT
-#define BLANK KC_NO // DON'T ALLOW TRANSPARENCY
 #define BROKEN KC_NO 
-#define NOTHING KC_NO
+#define XXXXXXXX KC_NO
 
 // some stuff to prevent mod tap keys from
 // doing other than what i am trying to do
@@ -111,29 +109,29 @@
 #define PURPLE 75,0,200
 
 #define ALPHA_KEYS LAYOUT_ergodox_pretty(\
-      _______    ,    _______    ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                   _______     ,    _______    ,      _______   ,     _______   ,     _______   ,     _______   ,     BLANK     , \
-      _______    ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,    _______    ,                                                                                   _______     ,     KC_Y      ,        KC_U    ,       KC_I    ,        KC_O   ,        KC_P   ,   NOTHING     , \
+      XXXXXXXX   ,    XXXXXXXX   ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,    XXXXXXXX   ,      XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,   XXXXXXXX    , \
+      XXXXXXXX   ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,     KC_Y      ,        KC_U    ,       KC_I    ,        KC_O   ,        KC_P   ,   XXXXXXXX    , \
       L_CTRL     ,    A_PARENS   ,     S_MOUSE   ,     D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                    H_NUMBERS  ,     J_ESCAPE   ,     K_D_PAD   ,     L_MOUSE   , COLON_PARENS  ,    R_CTRL     , \
-      L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,    _______    ,                                                                                   _______     ,     KC_N      ,        KC_M    ,    KC_COMMA   ,      PERIOD   ,     KC_SLASH  ,   R_SHIFT     , \
-      NOTHING    ,    NOTHING    ,       L_ALT   ,     _______   ,     _______   ,                                                                                                                                                      _______   ,     _______   ,       R_ALT   ,      NOTHING  ,    BROKEN     , \
+      L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,     KC_N      ,        KC_M    ,    KC_COMMA   ,      PERIOD   ,     KC_SLASH  ,   R_SHIFT     , \
+      XXXXXXXX   ,    XXXXXXXX   ,       L_ALT   ,     _______   ,     _______   ,                                                                                                                                                      _______   ,     _______   ,       R_ALT   ,      XXXXXXXX ,    BROKEN     , \
                                                                                                                        KC_CAPS   ,     TO(ALPHA) ,                    TO(ALPHA)  ,      KC_0     ,               \
                                                                                                                                        _______   ,                    _______    ,                               \
                                                                                                        ENTER     ,  TAB_OR_CMD   ,     _______   ,                    _______    ,  BKSP_OR_CMD  ,    SPACE      \
 )
 
 #define NUMBER_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    LOCKED     ,                                                                                    LOCKED     ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,    _______    ,\
+       XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    _______    ,\
        _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    _______    ,                                                                                    _______    ,     _______   ,        KC_7   ,      KC_8     ,     KC_9      ,    MULTIPLY   ,    _______    ,\
        _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,                                                                                                                     PLUS      ,        KC_4   ,      KC_5     ,     KC_6      ,    DIVIDE     ,    _______    ,\
        _______   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    _______    ,                                                                                    EQUAL      ,     MINUS     ,        KC_1   ,      KC_2     ,     KC_3      ,    _______    ,    _______    ,\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                                                                                     _______   ,     _______   ,     DECIMAL   ,    NOTHING    ,    BROKEN     ,\
+       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,                                                                                                                                                     _______   ,     _______   ,     DECIMAL   ,    XXXXXXXX   ,    BROKEN     ,\
                                                                                                                        _______   ,     _______   ,                     _______   ,     _______   ,               \
                                                                                                                                        _______   ,                     _______   ,                               \
                                                                                                        ENTER     ,  TAB_OR_CMD   ,     _______   ,                     _______   ,  BKSP_OR_CMD  ,     KC_0      \
 )
 
 #define PAREN_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     LOCKED    ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     BLANK     ,\
+       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
        _______   ,     RED_ON    ,     GREEN_ON  ,     PREV      ,     NEXT      ,     VOL_UP    ,     _______   ,                                                                                     _______   ,     _______   ,    L_PAREN    ,    R_PAREN    ,     KC_QUOTE  , RSFT(KC_QUOTE),     _______   ,\
        _______   ,     ORANGE_ON ,     BLUE_ON   ,     MUTE      ,     PLAY_PAUSE,     VOL_DOWN  ,                                                                                                                   LESS_THAN   ,    L_BRACKET  ,    R_BRACKET  ,  GREATER_THAN ,     _______   ,     _______   ,\
        _______   ,     YELLOW_ON ,     PURPLE_ON ,     GREEN_ON  ,     BLUE_ON   ,     PURPLE_ON ,     _______   ,                                                                                     _______   ,     _______   ,    L_CURLY    ,    R_CURLY    ,     _______   ,     _______   ,     _______   ,\
@@ -144,7 +142,7 @@
 )
 
 #define SYMBOL_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     LOCKED    ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     BLANK     ,\
+       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,    KC_GRAVE   , KC_AMPERSAND  ,  KC_ASTERISK  ,     KC_PIPE   ,   KC_BSLS     ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                    KC_TILDE   ,   KC_DOLLAR   ,   KC_PERCENT  , KC_CIRCUMFLEX ,    MINUS      ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                    _______    ,      MINUS    ,   KC_EXCLAIM  ,     KC_AT     ,     KC_HASH   , KC_UNDERSCORE ,     _______   ,\
@@ -155,7 +153,7 @@
 )
 
 #define MOUSE_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,     _______   ,     LOCKED    ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,    LOCKED     ,    LOCKED     ,     RESET     ,\
+       _______   ,     _______   ,     _______   ,     _______   ,    _______    ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,   XXXXXXXX    ,   XXXXXXXX    ,     RESET     ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                    _______    ,     _______   ,     _______   ,    _______    ,    _______    ,   KC_MS_BTN2  ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                   KC_MS_LEFT  ,   KC_MS_DOWN  ,    KC_MS_UP   ,  KC_MS_RIGHT  ,   KC_MS_BTN1  ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                    _______    ,     _______   ,     _______   ,   _______     ,    _______    ,     _______   ,     _______   ,\
@@ -166,7 +164,7 @@
 )
 
 #define D_PAD_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     LOCKED    ,                                                                                     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,     LOCKED    ,    LOCKED     ,     KC_POWER  ,\
+       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,     KC_POWER  ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,     _______   ,     RESET     ,     _______   ,     _______   ,    _______    ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                     KC_LEFT   ,     KC_DOWN   ,     KC_UP     ,     KC_RIGHT  ,    _______    ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    _______    ,     _______   ,\
