@@ -14,6 +14,7 @@
 
 // utility things 
 #define XXXXXXXX KC_NO
+#define KNOB KC_NO
 
 // macro
 #define MACRO1_REC DYN_REC_START1
@@ -113,7 +114,7 @@
 
 #define ALPHA_KEYS LAYOUT_ergodox_pretty(\
       XXXXXXXX   ,    XXXXXXXX   ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,    XXXXXXXX   ,      XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,   XXXXXXXX    , \
-      XXXXXXXX   ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,     KC_Y      ,        KC_U    ,       KC_I    ,        KC_O   ,        KC_P   ,   XXXXXXXX    , \
+      KNOB       ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,     KC_Y      ,        KC_U    ,       KC_I    ,        KC_O   ,        KC_P   ,   KNOB        , \
       L_CTRL_ESC ,    A_PARENS   ,     S_ALPHA   ,     D_NAV       ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                  H_NUMBERS  ,     J_SYMBOLS  ,     K_NAV     ,     L_ALPHA   , COLON_PARENS  ,    R_CTRL_ESC , \
       L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,     KC_N      ,        KC_M    ,    KC_COMMA   ,      PERIOD   ,     KC_SLASH  ,   R_SHIFT     , \
       XXXXXXXX   ,    XXXXXXXX   ,       L_ALT   ,     _______   ,     _______   ,                                                                                                                                                      _______   ,     _______   ,       R_ALT   ,      XXXXXXXX ,    XXXXXXXX   , \
@@ -124,7 +125,7 @@
 
 #define NUMBER_KEYS LAYOUT_ergodox_pretty(\
        XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX    ,   XXXXXXXX    ,    XXXXXXXX   ,\
-       XXXXXXXX  ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,        KC_7   ,      KC_8     ,     KC_9       ,    DIVIDE     ,    XXXXXXXX   ,\
+       KNOB      ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,        KC_7   ,      KC_8     ,     KC_9       ,    DIVIDE     ,    KNOB       ,\
        L_CTRL_ESC,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,                                                                                                                     PLUS      ,        KC_4   ,      KC_5     ,     KC_6       ,    MULTIPLY   ,    R_CTRL_ESC ,\
        L_SHIFT   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     MINUS     ,        KC_1   ,      KC_2     ,     KC_3       ,    EQUAL      ,    R_SHIFT    ,\
        XXXXXXXX  ,     XXXXXXXX  ,     L_ALT     ,     _______   ,    _______    ,                                                                                                                                                     _______   ,     _______   ,     DECIMAL    ,    XXXXXXXX   ,    XXXXXXXX   ,\
@@ -135,7 +136,7 @@
 
 #define PAREN_KEYS LAYOUT_ergodox_pretty(\
        XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
-       XXXXXXXX  ,     RED_ON    ,     GREEN_ON  ,     PREV      ,     NEXT      ,     VOL_UP    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,    L_PAREN    ,    R_PAREN    ,     QUOTE     ,   DBL_QUOTE   ,    XXXXXXXX   ,\
+       KNOB      ,     RED_ON    ,     GREEN_ON  ,     PREV      ,     NEXT      ,     VOL_UP    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,    L_PAREN    ,    R_PAREN    ,     QUOTE     ,   DBL_QUOTE   ,    KNOB       ,\
        L_CTRL_ESC,     ORANGE_ON ,     BLUE_ON   ,     MUTE      ,     PLAY_PAUSE,     VOL_DOWN  ,                                                                                                                   LESS_THAN   ,    L_BRACKET  ,    R_BRACKET  ,  GREATER_THAN ,     _______   ,    R_CTRL_ESC ,\
        L_SHIFT   ,     YELLOW_ON ,     PURPLE_ON ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,    L_CURLY    ,    R_CURLY    ,     _______   ,     _______   ,    R_SHIFT    ,\
        XXXXXXXX  ,     XXXXXXXX  ,     L_ALT     ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     R_ALT     ,   XXXXXXXX    ,     XXXXXXXX  ,\
@@ -146,7 +147,7 @@
 
 #define SYMBOL_KEYS LAYOUT_ergodox_pretty(\
        XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
-       XXXXXXXX  ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,   BACKTICK    ,    AMPERSAND  ,     ASTERISK  ,    TILDE      ,   BACKSLASH   ,    XXXXXXXX   ,\
+       KNOB      ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,   BACKTICK    ,    AMPERSAND  ,     ASTERISK  ,    TILDE      ,   BACKSLASH   ,    KNOB       ,\
        L_CTRL_ESC,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                     MINUS     ,      DOLLAR   ,      PERCENT  ,    CARET      ,    PIPE       ,    R_CTRL_ESC ,\
        L_SHIFT   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                     XXXXXXXX  ,   UNDERSCORE  , EXCLAMATION   ,     AT_SIGN   ,    HASH       ,   _______     ,    R_SHIFT    ,\
        XXXXXXXX  ,    XXXXXXXX   ,     L_ALT     ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,   XXXXXXXX    ,    XXXXXXXX   ,\
@@ -156,8 +157,8 @@
 )
 
 #define NAVIGATION_KEYS LAYOUT_ergodox_pretty(\
-      XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,     KC_POWER  ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,     RESET     ,     _______   ,     _______   ,    _______    ,     _______   ,\
+      XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,     XXXXXXXX  ,\
+       KNOB      ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,     RESET     ,     _______   ,     _______   ,    _______    ,     KNOB      ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                     KC_LEFT   ,     KC_DOWN   ,     KC_UP     ,     KC_RIGHT  ,   LEFT_CLICK  ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    MOUSE_LEFT ,  MOUSE_DOWN   ,    MOUSE_UP   ,  MOUSE_RIGHT  ,   RIGHT_CLICK ,     _______   ,\
       XXXXXXXX   ,    XXXXXXXX   ,     _______   ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,   XXXXXXXX    ,     XXXXXXXX  ,\
