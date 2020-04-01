@@ -85,21 +85,22 @@
 #define DECIMAL KC_DOT
 
 // other symbols
-#define HASH KC_HASH
 #define AMPERSAND KC_AMPERSAND
-#define DOLLAR KC_DOLLAR
 #define ASTERISK KC_ASTERISK
-#define UNDERSCORE KC_UNDERSCORE
 #define AT_SIGN KC_AT
-#define PERCENT KC_PERCENT
-#define CARET KC_CIRCUMFLEX
-#define PIPE KC_PIPE
 #define BACKSLASH KC_BSLS
-#define BANG KC_EXCLAIM
 #define BACKTICK KC_GRAVE
-#define TILDE KC_TILDE
+#define BANG KC_EXCLAIM
+#define CARET KC_CIRCUMFLEX
 #define DBL_QUOTE RSFT(KC_QUOTE)
+#define DOLLAR KC_DOLLAR
+#define EXCLAMATION KC_EXCLAIM
+#define HASH KC_HASH
+#define PERCENT KC_PERCENT
+#define PIPE KC_PIPE
 #define QUOTE KC_QUOTE
+#define TILDE KC_TILDE
+#define UNDERSCORE KC_UNDERSCORE
 
 // colors
 #define RED 255,0,0
@@ -146,7 +147,7 @@
        XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
        XXXXXXXX  ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,   BACKTICK    ,    AMPERSAND  ,     ASTERISK  ,    TILDE      ,   BACKSLASH   ,    XXXXXXXX   ,\
        L_CTRL_ESC,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                     MINUS     ,      DOLLAR   ,      PERCENT  ,    CARET      ,    PIPE       ,    R_CTRL_ESC ,\
-       L_SHIFT   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX  ,                                                                                     XXXXXXXX   ,   UNDERSCORE  ,       BANG    ,     AT_SIGN   ,    HASH       ,   _______     ,    R_SHIFT    ,\
+       L_SHIFT   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX  ,                                                                                     XXXXXXXX   ,   UNDERSCORE  , EXCLAMATION   ,     AT_SIGN   ,    HASH       ,   _______     ,    R_SHIFT    ,\
        XXXXXXXX  ,    XXXXXXXX   ,     L_ALT     ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,   XXXXXXXX    ,    XXXXXXXX   ,\
                                                                                                                        _______   ,    TO(ALPHA)  ,                     TO(ALPHA) ,     KC_0      ,               \
                                                                                                                                       XXXXXXXX   ,                     XXXXXXXX  ,                               \
