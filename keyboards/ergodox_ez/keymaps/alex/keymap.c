@@ -85,6 +85,7 @@
 #define DECIMAL KC_DOT
 
 // other symbols
+#define HASH KC_HASH
 #define AMPERSAND KC_AMPERSAND
 #define DOLLAR KC_DOLLAR
 #define ASTERISK KC_ASTERISK
@@ -97,6 +98,8 @@
 #define BANG KC_EXCLAIM
 #define BACKTICK KC_GRAVE
 #define TILDE KC_TILDE
+#define DBL_QUOTE RSFT(KC_QUOTE)
+#define QUOTE KC_QUOTE
 
 // colors
 #define RED 255,0,0
@@ -118,11 +121,11 @@
 )
 
 #define NUMBER_KEYS LAYOUT_ergodox_pretty(\
-       XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
-       XXXXXXXX  ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,        KC_7   ,      KC_8     ,     KC_9      ,    DIVIDE     ,    XXXXXXXX   ,\
-       L_CTRL_ESC,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,                                                                                                                     PLUS      ,        KC_4   ,      KC_5     ,     KC_6      ,    MULTIPLY   ,    R_CTRL_ESC ,\
-       L_SHIFT   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     MINUS     ,        KC_1   ,      KC_2     ,     KC_3      ,    EQUAL      ,    R_SHIFT    ,\
-       XXXXXXXX  ,     XXXXXXXX  ,     L_ALT     ,     _______   ,    _______    ,                                                                                                                                                     _______   ,     _______   ,     DECIMAL   ,    XXXXXXXX   ,    XXXXXXXX   ,\
+       XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX    ,   XXXXXXXX    ,    XXXXXXXX   ,\
+       XXXXXXXX  ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,        KC_7   ,      KC_8     ,     KC_9       ,    DIVIDE     ,    XXXXXXXX   ,\
+       L_CTRL_ESC,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,                                                                                                                     PLUS      ,        KC_4   ,      KC_5     ,     KC_6       ,    MULTIPLY   ,    R_CTRL_ESC ,\
+       L_SHIFT   ,     _______   ,     _______   ,     _______   ,    _______    ,    _______    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     MINUS     ,        KC_1   ,      KC_2     ,     KC_3       ,    EQUAL      ,    R_SHIFT    ,\
+       XXXXXXXX  ,     XXXXXXXX  ,     L_ALT     ,     _______   ,    _______    ,                                                                                                                                                     _______   ,     _______   ,     DECIMAL    ,    XXXXXXXX   ,    XXXXXXXX   ,\
                                                                                                                        _______   ,     TO(ALPHA) ,                     TO(ALPHA) ,     KC_0      ,               \
                                                                                                                                        XXXXXXXX  ,                     XXXXXXXX  ,                               \
                                                                                                        ENTER     ,  TAB_OR_CMD   ,     XXXXXXXX  ,                     XXXXXXXX  ,  BKSP_OR_CMD  ,     SPACE     \
@@ -130,7 +133,7 @@
 
 #define PAREN_KEYS LAYOUT_ergodox_pretty(\
        XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
-       XXXXXXXX  ,     RED_ON    ,     GREEN_ON  ,     PREV      ,     NEXT      ,     VOL_UP    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,    L_PAREN    ,    R_PAREN    ,     KC_QUOTE  , RSFT(KC_QUOTE),    XXXXXXXX   ,\
+       XXXXXXXX  ,     RED_ON    ,     GREEN_ON  ,     PREV      ,     NEXT      ,     VOL_UP    ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,    L_PAREN    ,    R_PAREN    ,     QUOTE     ,   DBL_QUOTE   ,    XXXXXXXX   ,\
        L_CTRL_ESC,     ORANGE_ON ,     BLUE_ON   ,     MUTE      ,     PLAY_PAUSE,     VOL_DOWN  ,                                                                                                                   LESS_THAN   ,    L_BRACKET  ,    R_BRACKET  ,  GREATER_THAN ,     _______   ,    R_CTRL_ESC ,\
        L_SHIFT   ,     YELLOW_ON ,     PURPLE_ON ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,    L_CURLY    ,    R_CURLY    ,     _______   ,     _______   ,    R_SHIFT    ,\
        XXXXXXXX  ,     XXXXXXXX  ,     L_ALT     ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     R_ALT     ,   XXXXXXXX    ,     XXXXXXXX  ,\
@@ -141,12 +144,12 @@
 
 #define SYMBOL_KEYS LAYOUT_ergodox_pretty(\
        XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
-       XXXXXXXX  ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    KC_GRAVE   , KC_AMPERSAND  ,  KC_ASTERISK  ,    KC_TILDE   ,   KC_BSLS     ,    XXXXXXXX   ,\
-       L_CTRL_ESC,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                     MINUS     ,   KC_DOLLAR   ,   KC_PERCENT  , KC_CIRCUMFLEX ,    PIPE       ,    R_CTRL_ESC ,\
-       L_SHIFT   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX  ,                                                                                     XXXXXXXX   ,  KC_UNDERSCORE,   KC_EXCLAIM  ,     KC_AT     ,     KC_HASH   ,   _______     ,    R_SHIFT    ,\
-       XXXXXXXX  ,    XXXXXXXX   ,     L_ALT     ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,   XXXXXXXX    ,     XXXXXXXX  ,\
-                                                                                                                       _______   ,     _______   ,                     TO(ALPHA) ,     KC_0      ,               \
-                                                                                                                                       _______   ,                     XXXXXXXX  ,                               \
+       XXXXXXXX  ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,   BACKTICK    ,    AMPERSAND  ,     ASTERISK  ,    TILDE      ,   BACKSLASH   ,    XXXXXXXX   ,\
+       L_CTRL_ESC,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                     MINUS     ,      DOLLAR   ,      PERCENT  ,    CARET      ,    PIPE       ,    R_CTRL_ESC ,\
+       L_SHIFT   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX  ,                                                                                     XXXXXXXX   ,   UNDERSCORE  ,       BANG    ,     AT_SIGN   ,    HASH       ,   _______     ,    R_SHIFT    ,\
+       XXXXXXXX  ,    XXXXXXXX   ,     L_ALT     ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,   XXXXXXXX    ,    XXXXXXXX   ,\
+                                                                                                                       _______   ,    TO(ALPHA)  ,                     TO(ALPHA) ,     KC_0      ,               \
+                                                                                                                                      XXXXXXXX   ,                     XXXXXXXX  ,                               \
                                                                                                        ENTER    ,     TAB_OR_CMD ,    XXXXXXXX   ,                     XXXXXXXX  ,   BKSP_OR_CMD ,     SPACE     \
 )
 
