@@ -50,33 +50,20 @@
 #define R_ALT KC_RALT
 #define R_CTRL_ESC MT(MOD_RCTL, KC_ESC)
 
-// letters that switch layers
+// layer-switching keys
 #define A_PARENS LT(PARENS, KC_A)
 #define S_ALPHA LT(ALPHA, KC_S)
-#define D_D_PAD LT(D_PAD, KC_D)
+#define D_NAV LT(NAVIGATION, KC_D)
 #define F_SYMBOLS LT(SYMBOLS, KC_F)
 #define G_NUMBERS LT(NUMBERS, KC_G)
 #define H_NUMBERS LT(NUMBERS, KC_H)
 #define J_SYMBOLS LT(SYMBOLS, KC_J)
-#define K_D_PAD LT(D_PAD, KC_K)
+#define K_NAV LT(NAVIGATION, KC_K)
 #define L_ALPHA LT(ALPHA, KC_L)
 #define COLON_PARENS LT(PARENS, KC_SCOLON)
 #define Z_HYPER HYPR_T(KC_Z)
 
-// punctuation
-#define SPACE KC_SPACE
-#define PERIOD KC_DOT
-#define ENTER KC_ENTER
-#define LESS_THAN KC_LEFT_ANGLE_BRACKET
-#define GREATER_THAN KC_RIGHT_ANGLE_BRACKET
-#define L_PAREN KC_LEFT_PAREN
-#define R_PAREN KC_RIGHT_PAREN
-#define L_BRACKET KC_LBRC
-#define R_BRACKET KC_RBRC
-#define L_CURLY KC_LCBR
-#define R_CURLY KC_RCBR
-
-// keypad Number pad
+// numberw layer symbols 
 #define PLUS KC_PLUS
 #define MINUS KC_MINUS
 #define DIVIDE KC_SLASH
@@ -84,13 +71,27 @@
 #define EQUAL KC_EQUAL
 #define DECIMAL KC_DOT
 
-// other symbols
+// alpha layer symbols
+#define SPACE KC_SPACE
+#define PERIOD KC_DOT
+#define ENTER KC_ENTER
+#define LESS_THAN KC_LEFT_ANGLE_BRACKET
+#define GREATER_THAN KC_RIGHT_ANGLE_BRACKET
+
+// parens layer symbols
+#define L_PAREN KC_LEFT_PAREN
+#define R_PAREN KC_RIGHT_PAREN
+#define L_BRACKET KC_LBRC
+#define R_BRACKET KC_RBRC
+#define L_CURLY KC_LCBR
+#define R_CURLY KC_RCBR
+
+// symbols layer symbols
 #define AMPERSAND KC_AMPERSAND
 #define ASTERISK KC_ASTERISK
 #define AT_SIGN KC_AT
 #define BACKSLASH KC_BSLS
 #define BACKTICK KC_GRAVE
-#define BANG KC_EXCLAIM
 #define CARET KC_CIRCUMFLEX
 #define DBL_QUOTE RSFT(KC_QUOTE)
 #define DOLLAR KC_DOLLAR
@@ -113,7 +114,7 @@
 #define ALPHA_KEYS LAYOUT_ergodox_pretty(\
       XXXXXXXX   ,    XXXXXXXX   ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,    XXXXXXXX   ,      XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,     XXXXXXXX  ,   XXXXXXXX    , \
       XXXXXXXX   ,      KC_Q     ,        KC_W   ,        KC_E   ,        KC_R   ,       KC_T    ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,     KC_Y      ,        KC_U    ,       KC_I    ,        KC_O   ,        KC_P   ,   XXXXXXXX    , \
-      L_CTRL_ESC ,    A_PARENS   ,     S_ALPHA   ,     D_D_PAD   ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                    H_NUMBERS  ,     J_SYMBOLS  ,     K_D_PAD   ,     L_ALPHA   , COLON_PARENS  ,    R_CTRL_ESC , \
+      L_CTRL_ESC ,    A_PARENS   ,     S_ALPHA   ,     NAV       ,   F_SYMBOLS   ,  G_NUMBERS    ,                                                                                                                    H_NUMBERS  ,     J_SYMBOLS  ,     K_NAV     ,     L_ALPHA   , COLON_PARENS  ,    R_CTRL_ESC , \
       L_SHIFT    ,    Z_HYPER    ,        KC_X   ,     KC_C      ,       KC_V    ,       KC_B    ,    XXXXXXXX   ,                                                                                   XXXXXXXX    ,     KC_N      ,        KC_M    ,    KC_COMMA   ,      PERIOD   ,     KC_SLASH  ,   R_SHIFT     , \
       XXXXXXXX   ,    XXXXXXXX   ,       L_ALT   ,     _______   ,     _______   ,                                                                                                                                                      _______   ,     _______   ,       R_ALT   ,      XXXXXXXX ,    XXXXXXXX   , \
                                                                                                                        KC_CAPS   ,     TO(ALPHA) ,                    TO(ALPHA)  ,      KC_0     ,               \
@@ -147,18 +148,18 @@
        XXXXXXXX  ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,    XXXXXXXX   ,\
        XXXXXXXX  ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,   BACKTICK    ,    AMPERSAND  ,     ASTERISK  ,    TILDE      ,   BACKSLASH   ,    XXXXXXXX   ,\
        L_CTRL_ESC,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                     MINUS     ,      DOLLAR   ,      PERCENT  ,    CARET      ,    PIPE       ,    R_CTRL_ESC ,\
-       L_SHIFT   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX  ,                                                                                     XXXXXXXX   ,   UNDERSCORE  , EXCLAMATION   ,     AT_SIGN   ,    HASH       ,   _______     ,    R_SHIFT    ,\
+       L_SHIFT   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                     XXXXXXXX  ,   UNDERSCORE  , EXCLAMATION   ,     AT_SIGN   ,    HASH       ,   _______     ,    R_SHIFT    ,\
        XXXXXXXX  ,    XXXXXXXX   ,     L_ALT     ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,   XXXXXXXX    ,    XXXXXXXX   ,\
                                                                                                                        _______   ,    TO(ALPHA)  ,                     TO(ALPHA) ,     KC_0      ,               \
                                                                                                                                       XXXXXXXX   ,                     XXXXXXXX  ,                               \
                                                                                                        ENTER    ,     TAB_OR_CMD ,    XXXXXXXX   ,                     XXXXXXXX  ,   BKSP_OR_CMD ,     SPACE     \
 )
 
-#define D_PAD_KEYS LAYOUT_ergodox_pretty(\
+#define NAVIGATION_KEYS LAYOUT_ergodox_pretty(\
       XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,     KC_POWER  ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,     RESET     ,     _______   ,     _______   ,    _______    ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                     KC_LEFT   ,     KC_DOWN   ,     KC_UP     ,     KC_RIGHT  ,   LEFT_CLICK  ,     _______   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,   MOUSE_LEFT ,   MOUSE_DOWN   ,    MOUSE_UP   ,  MOUSE_RIGHT  ,   RIGHT_CLICK ,     _______   ,\
+       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    MOUSE_LEFT ,  MOUSE_DOWN   ,    MOUSE_UP   ,  MOUSE_RIGHT  ,   RIGHT_CLICK ,     _______   ,\
       XXXXXXXX   ,    XXXXXXXX   ,     _______   ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,   XXXXXXXX    ,     XXXXXXXX  ,\
                                                                                                                        _______   ,   TO(ALPHA)   ,                     TO(ALPHA)  ,    KC_0       ,               \
                                                                                                                                      XXXXXXXX    ,                     XXXXXXXX   ,                               \
@@ -177,7 +178,7 @@ PURPLE_ON,
 enum layers {
 ALPHA,
 PARENS,
-D_PAD,
+NAVIGATION,
 SYMBOLS,
 NUMBERS,
 };
@@ -187,7 +188,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [NUMBERS] = NUMBER_KEYS,
   [PARENS] = PAREN_KEYS,
   [SYMBOLS] = SYMBOL_KEYS,
-  [D_PAD] = D_PAD_KEYS,
+  [NAVIGATION] = NAVIGATION_KEYS,
 };
 
 
@@ -254,7 +255,7 @@ uint32_t layer_state_set_user(uint32_t state) {
       case PARENS:
         light_color(PURPLE);
         break;
-      case D_PAD:
+      case NAVIGATION:
         light_color(ORANGE);
         break;
       case SYMBOLS:
