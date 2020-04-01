@@ -155,14 +155,14 @@
 )
 
 #define D_PAD_KEYS LAYOUT_ergodox_pretty(\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,     KC_POWER  ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,     _______   ,     RESET     ,     _______   ,     _______   ,    _______    ,     _______   ,\
+      XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,    XXXXXXXX   ,   XXXXXXXX    ,     KC_POWER  ,\
+       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,     _______   ,     RESET     ,     _______   ,     _______   ,    _______    ,     _______   ,\
        _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                     KC_LEFT   ,     KC_DOWN   ,     KC_UP     ,     KC_RIGHT  ,   LEFT_CLICK  ,     _______   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                     _______   ,   MOUSE_LEFT ,   MOUSE_DOWN   ,    MOUSE_UP   ,  MOUSE_RIGHT  ,   RIGHT_CLICK ,     _______   ,\
-       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,   XXXXXXXX    ,     XXXXXXXX  ,\
-                                                                                                                       _______   ,    _______    ,                     _______   ,    _______    ,               \
-                                                                                                                                      _______    ,                     _______   ,                               \
-                                                                                                       _______   ,     _______   ,    _______    ,                     _______   ,    _______    ,     SPACE     \
+       _______   ,     _______   ,     _______   ,     _______   ,     _______   ,     _______   ,    XXXXXXXX   ,                                                                                    XXXXXXXX   ,   MOUSE_LEFT ,   MOUSE_DOWN   ,    MOUSE_UP   ,  MOUSE_RIGHT  ,   RIGHT_CLICK ,     _______   ,\
+      XXXXXXXX   ,    XXXXXXXX   ,     _______   ,     _______   ,     _______   ,                                                                                                                                                     _______   ,     _______   ,     _______   ,   XXXXXXXX    ,     XXXXXXXX  ,\
+                                                                                                                       _______   ,   TO(ALPHA)   ,                     TO(ALPHA)  ,    KC_0       ,               \
+                                                                                                                                     XXXXXXXX    ,                     XXXXXXXX   ,                               \
+                                                                                                       ENTER     ,    TAB_OR_CMD ,   XXXXXXXX    ,                     XXXXXXXX   ,  BKSP_OR_CMD  ,     SPACE     \
 )
 
 enum custom_keycodes {
