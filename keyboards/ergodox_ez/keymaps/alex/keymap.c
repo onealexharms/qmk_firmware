@@ -206,11 +206,14 @@ void light_color(int red, int green, int blue) {
   #endif
 }
  
-void toggle_capslock_indicator(keyrecord_t *record) {
+void toggle_capslock(keyrecord_t *record) {
+  capslock_is_on = !capslock_is_on;
   if (capslock_is_on) {
     ergodox_right_led_1_on();
+    light_color(RED);
   } else {
     ergodox_right_led_1_off();
+    light_color(YELLOW);
   }
 }
 
@@ -218,8 +221,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case KC_CAPS:
       if (record->event.pressed) {
-        capslock_is_on = !capslock_is_on;
-        toggle_capslock_indicator(record);
+        toggle_capslock(record);
       }
       return true;
     case RED_ON:
