@@ -13,9 +13,9 @@
 #include "keymap_bepo.h"
 
 // utility things 
-#define XXXXXXXXXX KC_NO
-#define KNOB KC_NO
-#define AVAILABLE KC_NO
+#define XXXXXXXXXX KC_NO // there's no kyria key here
+#define KNOB KC_NO // the knob on the kyria goes here
+#define _________ KC_NO // available keys
 
 // macro
 #define MACRO1_REC DYN_REC_START1
@@ -117,8 +117,8 @@
 XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
     KNOB  ,     KC_Q  ,     KC_W  ,     KC_E  ,     KC_R  ,     KC_T  , XXXXXXXXXX,                              XXXXXXXXXX,     KC_Y  ,     KC_U  ,     KC_I  ,     KC_O  ,     KC_P  ,     KNOB  , \
 L_CTRL_ESC, A_PARENS  ,  S_ALPHA  ,    D_NAV  , F_SYMBOLS , G_NUMBERS ,                                                       H_NUMBERS, J_SYMBOLS ,    K_NAV  ,  L_ALPHA  , CLN_PARENS, R_CTRL_ESC, \
- L_SHIFT  ,  Z_HYPER  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  , XXXXXXXXXX,                              XXXXXXXXXX,     KC_N  ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_SHIFT  , \
-XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , AVAILABLE , AVAILABLE ,                                                                              AVAILABLE , AVAILABLE ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
+ L_SHIFT  ,  Z_HYPER  ,     KC_X ,     KC_C   ,     KC_V  ,     KC_B  , XXXXXXXXXX,                              XXXXXXXXXX,     KC_N  ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_SHIFT  , \
+XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
                                                                          KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
                                                                                     XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
                                                                ENTER  ,  TAB_CMD  , XXXXXXXXXX,      XXXXXXXXXX, BKSP_CMD  ,    SPACE                                                                \
@@ -126,10 +126,10 @@ XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , AVAILABLE , AVAILABLE ,                     
 
 #define NUMBER_KEYS LAYOUT_ergodox_pretty(\
 XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
-    KNOB  , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , XXXXXXXXXX,                              XXXXXXXXXX, AVAILABLE ,     KC_7  ,     KC_8  ,     KC_9  ,   DIVIDE  ,     KNOB  , \
-L_CTRL_ESC, AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE ,                                                          PLUS  ,     KC_4  ,     KC_5  ,     KC_6  , MULTIPLY  , R_CTRL_ESC, \
- L_SHIFT  , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , XXXXXXXXXX,                              XXXXXXXXXX,    MINUS  ,     KC_1  ,     KC_2  ,     KC_3  ,    EQUAL  ,  R_SHIFT  , \
-XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , AVAILABLE , AVAILABLE ,                                                                                  KC_0  , AVAILABLE ,  DECIMAL  , XXXXXXXXXX, XXXXXXXXXX, \
+    KNOB  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, _________ ,     KC_7  ,     KC_8  ,     KC_9  ,   DIVIDE  ,     KNOB  , \
+L_CTRL_ESC, _________ , _________ , _________ , _________ , _________ ,                                                          PLUS  ,     KC_4  ,     KC_5  ,     KC_6  , MULTIPLY  , R_CTRL_ESC, \
+ L_SHIFT  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX,    MINUS  ,     KC_1  ,     KC_2  ,     KC_3  ,    EQUAL  ,  R_SHIFT  , \
+XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                                  KC_0  , _________ ,  DECIMAL  , XXXXXXXXXX, XXXXXXXXXX, \
                                                                          KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
                                                                                     XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
                                                                ENTER  ,  TAB_CMD  , XXXXXXXXXX,      XXXXXXXXXX, BKSP_CMD  ,    SPACE                                                                \
@@ -137,10 +137,10 @@ XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , AVAILABLE , AVAILABLE ,                     
 
 #define PAREN_KEYS LAYOUT_ergodox_pretty(\
 XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
-    KNOB  ,   RED_ON  , GREEN_ON  ,     PREV  ,     NEXT  ,   VOL_UP  , XXXXXXXXXX,                              XXXXXXXXXX, AVAILABLE ,  L_PAREN  ,  R_PAREN  ,    QUOTE  , DBL_QUOTE ,     KNOB  , \
-L_CTRL_ESC, ORANGE_ON ,  BLUE_ON  ,     MUTE  , PLAY_PAUSE, VOL_DOWN  ,                                                       LESS_THAN, L_BRACKET , R_BRACKET , MORE_THAN , AVAILABLE , R_CTRL_ESC, \
- L_SHIFT  , YELLOW_ON , PURPLE_ON , AVAILABLE , AVAILABLE , AVAILABLE , XXXXXXXXXX,                              XXXXXXXXXX, AVAILABLE ,  L_CURLY  ,  R_CURLY  , AVAILABLE , AVAILABLE ,  R_SHIFT  , \
-XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , AVAILABLE , AVAILABLE ,                                                                              AVAILABLE , AVAILABLE ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
+    KNOB  ,   RED_ON  , GREEN_ON  ,     PREV  ,     NEXT  ,   VOL_UP  , XXXXXXXXXX,                              XXXXXXXXXX, _________ ,  L_PAREN  ,  R_PAREN  ,    QUOTE  , DBL_QUOTE ,     KNOB  , \
+L_CTRL_ESC, ORANGE_ON ,  BLUE_ON  ,     MUTE  , PLAY_PAUSE, VOL_DOWN  ,                                                       LESS_THAN, L_BRACKET , R_BRACKET , MORE_THAN , _________ , R_CTRL_ESC, \
+ L_SHIFT  , YELLOW_ON , PURPLE_ON , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, _________ ,  L_CURLY  ,  R_CURLY  , _________ , _________ ,  R_SHIFT  , \
+XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
                                                                          KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
                                                                                     XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
                                                                ENTER  ,  TAB_CMD  , XXXXXXXXXX,      XXXXXXXXXX, BKSP_CMD  ,    SPACE                                                                \
@@ -148,10 +148,10 @@ XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , AVAILABLE , AVAILABLE ,                     
 
 #define SYMBOL_KEYS LAYOUT_ergodox_pretty(\
 XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
-    KNOB  , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , XXXXXXXXXX,                              XXXXXXXXXX, BACKTICK  , AMPERSAND , ASTERISK  ,    TILDE  , BACKSLASH ,     KNOB  , \
-L_CTRL_ESC, AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE ,                                                           MINUS,   DOLLAR  ,  PERCENT  ,    CARET  ,     PIPE  , R_CTRL_ESC, \
- L_SHIFT  , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , XXXXXXXXXX,                              XXXXXXXXXX, UNDERSCORE,EXCLAMATION,  AT_SIGN  ,     HASH  , AVAILABLE ,  R_SHIFT  , \
-XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , AVAILABLE , AVAILABLE ,                                                                              AVAILABLE , AVAILABLE ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
+    KNOB  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, BACKTICK  , AMPERSAND , ASTERISK  ,    TILDE  , BACKSLASH ,     KNOB  , \
+L_CTRL_ESC, _________ , _________ , _________ , _________ , _________ ,                                                           MINUS,   DOLLAR  ,  PERCENT  ,    CARET  ,     PIPE  , R_CTRL_ESC, \
+ L_SHIFT  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, UNDERSCORE,EXCLAMATION,  AT_SIGN  ,     HASH  , _________ ,  R_SHIFT  , \
+XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
                                                                          KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
                                                                                     XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
                                                                ENTER  ,  TAB_CMD  , XXXXXXXXXX,      XXXXXXXXXX, BKSP_CMD  ,    SPACE                                                                \
@@ -159,10 +159,10 @@ XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , AVAILABLE , AVAILABLE ,                     
 
 #define NAVIGATION_KEYS LAYOUT_ergodox_pretty(\
 XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
-    KNOB  , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , XXXXXXXXXX,                              XXXXXXXXXX, AVAILABLE ,    RESET  , AVAILABLE , AVAILABLE , AVAILABLE ,     KNOB  , \
-L_CTRL_ESC, AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE ,                                                       KC_LEFT  ,  KC_DOWN  ,    KC_UP  , KC_RIGHT  , LEFT_CLICK, R_CTRL_ESC, \
- L_SHIFT  , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , AVAILABLE , XXXXXXXXXX,                              XXXXXXXXXX, MOUSE_LEFT, MOUSE_DOWN, MOUSE_UP  , MOUSE_RT  , RIGHT_CLK ,  R_SHIFT  , \
-XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , AVAILABLE , AVAILABLE ,                                                                              AVAILABLE , AVAILABLE ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
+    KNOB  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, _________ ,    RESET  , _________ , _________ , _________ ,     KNOB  , \
+L_CTRL_ESC, _________ , _________ , _________ , _________ , _________ ,                                                       KC_LEFT  ,  KC_DOWN  ,    KC_UP  , KC_RIGHT  , LEFT_CLICK, R_CTRL_ESC, \
+ L_SHIFT  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, MOUSE_LEFT, MOUSE_DOWN, MOUSE_UP  , MOUSE_RT  , RIGHT_CLK ,  R_SHIFT  , \
+XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
                                                                          KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
                                                                                     XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
                                                                ENTER  ,  TAB_CMD  , XXXXXXXXXX,      XXXXXXXXXX, BKSP_CMD  ,    SPACE                                                                \
