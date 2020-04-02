@@ -17,13 +17,6 @@
 #define KNOB KC_NO // the knob on the kyria goes here
 #define _________ KC_NO // available keys
 
-// macro recording keys
-#define MACRO1_REC DYN_REC_START1
-#define MACRO2_REC DYN_REC_START2
-#define MACRO_STOP DYN_REC_STOP
-#define MACRO1_PLAY DYN_MACRO_PLAY1
-#define MACRO2_PLAY DYN_MACRO_PLAY2
-
 // media control keys
 #define VOL_UP KC_AUDIO_VOL_UP
 #define NEXT KC_MEDIA_FAST_FORWARD
