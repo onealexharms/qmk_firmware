@@ -35,7 +35,6 @@
 #define R_CTRL_ESC MT(MOD_RCTL, KC_ESC)
 
 // layer-switching keys
-#define A_PARENS LT(PARENS, KC_A)
 #define S_ALPHA LT(ALPHA, KC_S)
 #define D_NAV LT(NAVIGATION, KC_D)
 #define F_SYMBOLS LT(SYMBOLS, KC_F)
@@ -44,7 +43,6 @@
 #define J_SYMBOLS LT(SYMBOLS, KC_J)
 #define K_NAV LT(NAVIGATION, KC_K)
 #define L_ALPHA LT(ALPHA, KC_L)
-#define CLN_PARENS LT(PARENS, KC_SCOLON)
 #define Z_HYPER HYPR_T(KC_Z)
 
 // numberw layer symbols 
@@ -77,6 +75,7 @@
 #define BACKSLASH KC_BSLS
 #define BACKTICK KC_GRAVE
 #define CARET KC_CIRCUMFLEX
+#define COLONS KC_SCOLON
 #define DBL_QUOTE RSFT(KC_QUOTE)
 #define DOLLAR KC_DOLLAR
 #define EXCLAMATION KC_EXCLAIM
@@ -98,7 +97,7 @@
 #define ALPHA_KEYS LAYOUT_ergodox_pretty(\
    XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
        KNOB  ,     KC_Q  ,     KC_W  ,     KC_E  ,     KC_R  ,     KC_T  , XXXXXXXXXX,                              XXXXXXXXXX,     KC_Y  ,     KC_U  ,     KC_I  ,     KC_O  ,     KC_P  ,     KNOB  , \
-   L_CTRL_ESC, A_PARENS  ,  S_ALPHA  ,    D_NAV  , F_SYMBOLS , G_NUMBERS ,                                                       H_NUMBERS, J_SYMBOLS ,    K_NAV  ,  L_ALPHA  , CLN_PARENS, R_CTRL_ESC, \
+   L_CTRL_ESC,     KC_A  ,  S_ALPHA  ,    D_NAV  , F_SYMBOLS , G_NUMBERS ,                                                       H_NUMBERS, J_SYMBOLS ,    K_NAV  ,  L_ALPHA  ,   COLONS  , R_CTRL_ESC, \
     L_SHIFT  ,  Z_HYPER  ,     KC_X ,     KC_C   ,     KC_V  ,     KC_B  , XXXXXXXXXX,                              XXXXXXXXXX,     KC_N  ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_SHIFT  , \
    XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
                                                                             KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
@@ -117,22 +116,11 @@
                                                                   ENTER  ,  TAB_CMD  , XXXXXXXXXX,      XXXXXXXXXX, BKSP_CMD  ,    SPACE                                                                \
 )
 
-#define PAREN_KEYS LAYOUT_ergodox_pretty(\
-   XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
-       KNOB  , _________ , _________ ,     PREV  ,     NEXT  ,   VOL_UP  , XXXXXXXXXX,                              XXXXXXXXXX, _________ ,  L_PAREN  ,  R_PAREN  ,    QUOTE  , DBL_QUOTE ,     KNOB  , \
-   L_CTRL_ESC, _________ , _________ ,     MUTE  , PLAY_PAUSE, VOL_DOWN  ,                                                       LESS_THAN, L_BRACKET , R_BRACKET , MORE_THAN , _________ , R_CTRL_ESC, \
-    L_SHIFT  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, _________ ,  L_CURLY  ,  R_CURLY  , _________ , _________ ,  R_SHIFT  , \
-   XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
-                                                                            KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
-                                                                                       XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
-                                                                  ENTER  ,  TAB_CMD  , XXXXXXXXXX,      XXXXXXXXXX, BKSP_CMD  ,    SPACE                                                                \
-)
-
 #define SYMBOL_KEYS LAYOUT_ergodox_pretty(\
    XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
-       KNOB  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, BACKTICK  , AMPERSAND , ASTERISK  ,    TILDE  , BACKSLASH ,     KNOB  , \
-   L_CTRL_ESC, _________ , _________ , _________ , _________ , _________ ,                                                           MINUS,   DOLLAR  ,  PERCENT  ,    CARET  ,     PIPE  , R_CTRL_ESC, \
-    L_SHIFT  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, UNDERSCORE,EXCLAMATION,  AT_SIGN  ,     HASH  , _________ ,  R_SHIFT  , \
+       KNOB  , BACKSLASH ,    TILDE  , ASTERISK  , AMPERSAND , BACKTICK  , XXXXXXXXXX,                              XXXXXXXXXX, BACKTICK  , AMPERSAND , ASTERISK  ,    TILDE  ,    QUOTE  ,     KNOB  , \
+   L_CTRL_ESC,     PIPE  ,    CARET  ,  PERCENT  ,   DOLLAR  ,   MINUS   ,                                                         MINUS  ,   DOLLAR  ,  PERCENT  ,    CARET  , BACKSLASH , R_CTRL_ESC, \
+    L_SHIFT  , _________ ,     HASH  ,  AT_SIGN  ,EXCLAMATION, UNDERSCORE, XXXXXXXXXX,                              XXXXXXXXXX, UNDERSCORE,EXCLAMATION,  AT_SIGN  ,     HASH  ,     PIPE  ,  R_SHIFT  , \
    XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
                                                                             KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
                                                                                        XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
@@ -141,8 +129,8 @@
 
 #define NAVIGATION_KEYS LAYOUT_ergodox_pretty(\
    XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
-       KNOB  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, _________ ,    RESET  , _________ , _________ , _________ ,     KNOB  , \
-   L_CTRL_ESC, _________ , _________ , _________ , _________ , _________ ,                                                       KC_LEFT  ,  KC_DOWN  ,    KC_UP  , KC_RIGHT  , LEFT_CLICK, R_CTRL_ESC, \
+       KNOB  , _________ , _________ ,    PREV   ,     NEXT  ,   VOL_UP  , XXXXXXXXXX,                              XXXXXXXXXX, _________ ,    RESET  , _________ , _________ , _________ ,     KNOB  , \
+   L_CTRL_ESC, _________ , _________ ,    MUTE   , PLAY_PAUSE,  VOL_DOWN ,                                                       KC_LEFT  ,  KC_DOWN  ,    KC_UP  , KC_RIGHT  , LEFT_CLICK, R_CTRL_ESC, \
     L_SHIFT  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, MOUSE_LEFT, MOUSE_DOWN, MOUSE_UP  , MOUSE_RT  , RIGHT_CLK ,  R_SHIFT  , \
    XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
                                                                             KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
@@ -156,7 +144,6 @@ enum custom_keycodes {
 
 enum layers {
 ALPHA,
-PARENS,
 NAVIGATION,
 SYMBOLS,
 NUMBERS,
@@ -165,7 +152,6 @@ NUMBERS,
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [ALPHA] = ALPHA_KEYS,
   [NUMBERS] = NUMBER_KEYS,
-  [PARENS] = PAREN_KEYS,
   [SYMBOLS] = SYMBOL_KEYS,
   [NAVIGATION] = NAVIGATION_KEYS,
 };
@@ -212,9 +198,6 @@ uint32_t layer_state_set_user(uint32_t state) {
     switch (layer) {
       case ALPHA:
         light_color(YELLOW);
-        break;
-      case PARENS:
-        light_color(PURPLE);
         break;
       case NAVIGATION:
         light_color(ORANGE);
