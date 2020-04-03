@@ -118,9 +118,9 @@
 
 #define SYMBOL_KEYS LAYOUT_ergodox_pretty(\
    XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
-       KNOB  , BACKSLASH ,    TILDE  , ASTERISK  , AMPERSAND , BACKTICK  , XXXXXXXXXX,                              XXXXXXXXXX, BACKTICK  , AMPERSAND , ASTERISK  ,    TILDE  ,    QUOTE  ,     KNOB  , \
-   L_CTRL_ESC,     PIPE  ,    CARET  ,  PERCENT  ,   DOLLAR  ,   MINUS   ,                                                         MINUS  ,   DOLLAR  ,  PERCENT  ,    CARET  , BACKSLASH , R_CTRL_ESC, \
-    L_SHIFT  , _________ ,     HASH  ,  AT_SIGN  ,EXCLAMATION, UNDERSCORE, XXXXXXXXXX,                              XXXXXXXXXX, UNDERSCORE,EXCLAMATION,  AT_SIGN  ,     HASH  ,     PIPE  ,  R_SHIFT  , \
+       KNOB  , _________ , _________ , L_BRACKET , R_BRACKET , _________ , XXXXXXXXXX,                              XXXXXXXXXX, BACKTICK  , AMPERSAND , ASTERISK  ,    TILDE  ,    QUOTE  ,     KNOB  , \
+   L_CTRL_ESC, _________ , LESS_THAN ,  L_PAREN  ,  R_PAREN  , MORE_THAN ,                                                         MINUS  ,   DOLLAR  ,  PERCENT  ,    CARET  , BACKSLASH , R_CTRL_ESC, \
+    L_SHIFT  , _________ , _________ ,  L_CURLY  ,  R_CURLY  , _________ , XXXXXXXXXX,                              XXXXXXXXXX, UNDERSCORE,EXCLAMATION,  AT_SIGN  ,     HASH  ,     PIPE  ,  R_SHIFT  , \
    XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
                                                                             KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
                                                                                        XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
