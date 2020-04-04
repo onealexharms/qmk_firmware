@@ -5,6 +5,7 @@
 #define XXXXXXXXXX KC_NO // there's no kyria key here
 #define KNOB KC_NO // the knob on the kyria goes here
 #define _________ KC_NO // available keys
+#define SAME _______ // Transparent. Only use for same as alpha layer
 
 // media control keys
 #define VOL_UP KC_AUDIO_VOL_UP
@@ -107,35 +108,35 @@
 
 #define NUMBER_KEYS LAYOUT_ergodox_pretty(\
    XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
-       KNOB  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, _________ ,     KC_7  ,     KC_8  ,     KC_9  ,   DIVIDE  ,     KNOB  , \
-   L_CTRL_ESC, _________ , _________ , _________ , _________ , _________ ,                                                          PLUS  ,     KC_4  ,     KC_5  ,     KC_6  , MULTIPLY  , R_CTRL_ESC, \
-    L_SHIFT  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX,    MINUS  ,     KC_1  ,     KC_2  ,     KC_3  ,    EQUAL  ,  R_SHIFT  , \
-   XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                                  KC_0  , _________ ,  DECIMAL  , XXXXXXXXXX, XXXXXXXXXX, \
-                                                                            KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
+       SAME  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, _________ ,     KC_7  ,     KC_8  ,     KC_9  ,   DIVIDE  ,     SAME  , \
+       SAME  , _________ , _________ , _________ , _________ , _________ ,                                                          PLUS  ,     KC_4  ,     KC_5  ,     KC_6  , MULTIPLY  ,     SAME  , \
+       SAME  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX,    MINUS  ,     KC_1  ,     KC_2  ,     KC_3  ,    EQUAL  ,     SAME  , \
+   XXXXXXXXXX, XXXXXXXXXX,     SAME  , _________ , _________ ,                                                                                  KC_0  , _________ ,  DECIMAL  , XXXXXXXXXX, XXXXXXXXXX, \
+                                                                               SAME  ,     SAME  ,          SAME  ,     SAME  ,                                                                         \
                                                                                        XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
-                                                                  ENTER  ,  TAB_CMD  , XXXXXXXXXX,      XXXXXXXXXX, BKSP_CMD  ,    SPACE                                                                \
+                                                                   SAME  ,     SAME  , XXXXXXXXXX,      XXXXXXXXXX,     SAME  ,     SAME                                                                \
 )
 
 #define SYMBOL_KEYS LAYOUT_ergodox_pretty(\
    XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
-       KNOB  , _________ , _________ , L_BRACKET , R_BRACKET , _________ , XXXXXXXXXX,                              XXXXXXXXXX, BACKTICK  , AMPERSAND , ASTERISK  ,    TILDE  ,    QUOTE  ,     KNOB  , \
-   L_CTRL_ESC, _________ , LESS_THAN ,  L_PAREN  ,  R_PAREN  , MORE_THAN ,                                                         MINUS  ,   DOLLAR  ,  PERCENT  ,    CARET  , BACKSLASH , R_CTRL_ESC, \
-    L_SHIFT  , _________ , _________ ,  L_CURLY  ,  R_CURLY  , _________ , XXXXXXXXXX,                              XXXXXXXXXX, UNDERSCORE,EXCLAMATION,  AT_SIGN  ,     HASH  ,     PIPE  ,  R_SHIFT  , \
-   XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
-                                                                            KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
+       SAME  , _________ , _________ , L_BRACKET , R_BRACKET , _________ , XXXXXXXXXX,                              XXXXXXXXXX, BACKTICK  , AMPERSAND , ASTERISK  ,    TILDE  ,    QUOTE  ,     SAME  , \
+       SAME  , _________ , LESS_THAN ,  L_PAREN  ,  R_PAREN  , MORE_THAN ,                                                         MINUS  ,   DOLLAR  ,  PERCENT  ,    CARET  , BACKSLASH ,     SAME  , \
+       SAME  , _________ , _________ ,  L_CURLY  ,  R_CURLY  , _________ , XXXXXXXXXX,                              XXXXXXXXXX, UNDERSCORE,EXCLAMATION,  AT_SIGN  ,     HASH  ,     PIPE  ,     SAME  , \
+   XXXXXXXXXX, XXXXXXXXXX,     SAME  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
+                                                                               SAME  ,     SAME  ,          SAME  ,     SAME  ,                                                                         \
                                                                                        XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
-                                                                  ENTER  ,  TAB_CMD  , XXXXXXXXXX,      XXXXXXXXXX, BKSP_CMD  ,    SPACE                                                                \
+                                                                   SAME  ,     SAME  , XXXXXXXXXX,      XXXXXXXXXX,     SAME  ,     SAME                                                                \
 )
 
 #define NAVIGATION_KEYS LAYOUT_ergodox_pretty(\
    XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
-       KNOB  , _________ , _________ ,    PREV   ,     NEXT  ,   VOL_UP  , XXXXXXXXXX,                              XXXXXXXXXX, _________ ,    RESET  , _________ , _________ , _________ ,     KNOB  , \
-   L_CTRL_ESC, _________ , _________ ,    MUTE   , PLAY_PAUSE,  VOL_DOWN ,                                                       KC_LEFT  ,  KC_DOWN  ,    KC_UP  , KC_RIGHT  , LEFT_CLICK, R_CTRL_ESC, \
-    L_SHIFT  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, MOUSE_LEFT, MOUSE_DOWN, MOUSE_UP  , MOUSE_RT  , RIGHT_CLK ,  R_SHIFT  , \
-   XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
-                                                                            KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
+       SAME  , _________ , _________ ,    PREV   ,     NEXT  ,   VOL_UP  , XXXXXXXXXX,                              XXXXXXXXXX, _________ ,    RESET  , _________ , _________ , _________ ,     SAME  , \
+       SAME  , _________ , _________ ,    MUTE   , PLAY_PAUSE,  VOL_DOWN ,                                                       KC_LEFT  ,  KC_DOWN  ,    KC_UP  , KC_RIGHT  , LEFT_CLICK,     SAME  , \
+       SAME  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, MOUSE_LEFT, MOUSE_DOWN, MOUSE_UP  , MOUSE_RT  , RIGHT_CLK ,     SAME  , \
+   XXXXXXXXXX, XXXXXXXXXX,     SAME  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
+                                                                               SAME  ,     SAME  ,          SAME  ,     SAME  ,                                                                         \
                                                                                        XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
-                                                                  ENTER  ,  TAB_CMD  , XXXXXXXXXX,      XXXXXXXXXX, BKSP_CMD  ,    SPACE                                                                \
+                                                                   SAME  ,     SAME  , XXXXXXXXXX,      XXXXXXXXXX,     SAME  ,     SAME                                                                \
 )
 
 enum custom_keycodes {
