@@ -36,14 +36,12 @@
 #define R_CTRL_ESC MT(MOD_RCTL, KC_QUOTE)
 
 // layer-switching keys
-#define S_ALPHA LT(ALPHA, KC_S)
 #define D_NAV LT(NAVIGATION, KC_D)
 #define F_SYMBOLS LT(SYMBOLS, KC_F)
 #define G_NUMBERS LT(NUMBERS, KC_G)
 #define H_NUMBERS LT(NUMBERS, KC_H)
 #define J_SYMBOLS LT(SYMBOLS, KC_J)
 #define K_NAV LT(NAVIGATION, KC_K)
-#define L_ALPHA LT(ALPHA, KC_L)
 #define Z_HYPER HYPR_T(KC_Z)
 
 // numberw layer symbols 
@@ -76,7 +74,7 @@
 #define BACKSLASH KC_BSLS
 #define BACKTICK KC_GRAVE
 #define CARET KC_CIRCUMFLEX
-#define COLONS KC_SCOLON
+#define SEMICOLON KC_SCOLON
 #define DOLLAR KC_DOLLAR
 #define EXCLAMATION KC_EXCLAIM
 #define HASH KC_HASH
@@ -96,8 +94,8 @@
 #define ALPHA_KEYS LAYOUT_ergodox_pretty(\
    XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
        KNOB  ,     KC_Q  ,     KC_W  ,     KC_E  ,     KC_R  ,     KC_T  , XXXXXXXXXX,                              XXXXXXXXXX,     KC_Y  ,     KC_U  ,     KC_I  ,     KC_O  ,     KC_P  ,     KNOB  , \
-   L_CTRL_ESC,     KC_A  ,  S_ALPHA  ,    D_NAV  , F_SYMBOLS , G_NUMBERS ,                                                       H_NUMBERS, J_SYMBOLS ,    K_NAV  ,  L_ALPHA  ,   COLONS  , R_CTRL_ESC, \
-    L_SHIFT  ,  Z_HYPER  ,     KC_X ,     KC_C   ,     KC_V  ,     KC_B  , XXXXXXXXXX,                              XXXXXXXXXX,     KC_N  ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_SHIFT  , \
+   L_CTRL_ESC,     KC_A  ,     KC_S  ,    D_NAV  , F_SYMBOLS , G_NUMBERS ,                                                       H_NUMBERS, J_SYMBOLS ,    K_NAV  ,     KC_L  , SEMICOLON , R_CTRL_ESC, \
+    L_SHIFT  ,  Z_HYPER  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  , XXXXXXXXXX,                              XXXXXXXXXX,     KC_N  ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_SHIFT  , \
    XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
                                                                             KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
                                                                                        XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
@@ -157,19 +155,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 const bool KEY_NEEDS_HANDLING = true;
 const bool KEY_IS_HANDLED = false;
-/*
-const bool IGNORE_TAP_INTERRUPT = true;
-const bool DO_NOT_IGNORE_TAP_INTERRUPT = false;
-
-bool get_ignore_mod_tap_interrupt(uint16_t keycode) {
-  switch (keycode) {
-    case BKSP_CMD:
-      return true;
-    default:
-      return false;
-  }
-}
-*/
 
 void light_color(int red, int green, int blue) {
   #ifdef RGBLIGHT_ENABLE
