@@ -33,7 +33,7 @@
 #define L_CTRL_ESC MT(MOD_LCTL, KC_ESC)
 #define R_SHIFT KC_RSFT
 #define R_ALT KC_RALT
-#define R_CTRL_ESC MT(MOD_RCTL, KC_QUOTE)
+#define R_CTRL_QUOT MT(MOD_RCTL, KC_QUOTE)
 
 // layer-switching keys
 #define D_NAV LT(NAVIGATION, KC_D)
@@ -95,7 +95,7 @@
 #define ALPHA_KEYS LAYOUT_ergodox_pretty(\
    XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
        KNOB  ,     KC_Q  ,     KC_W  ,     KC_E  ,     KC_R  ,     KC_T  , XXXXXXXXXX,                              XXXXXXXXXX,     KC_Y  ,     KC_U  ,     KC_I  ,     KC_O  ,     KC_P  ,     KNOB  , \
-   L_CTRL_ESC,     KC_A  ,     KC_S  ,    D_NAV  , F_SYMBOLS , G_NUMBERS ,                                                       H_NUMBERS, J_SYMBOLS ,    K_NAV  ,     KC_L  , SEMICOLON , R_CTRL_ESC, \
+   L_CTRL_ESC,     KC_A  ,     KC_S  ,    D_NAV  , F_SYMBOLS , G_NUMBERS ,                                                       H_NUMBERS, J_SYMBOLS ,    K_NAV  ,     KC_L  , SEMICOLON ,R_CTRL_QUOT, \
     L_SHIFT  ,  Z_HYPER  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  , XXXXXXXXXX,                              XXXXXXXXXX,     KC_N  ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_SHIFT  , \
    XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
                                                                             KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
