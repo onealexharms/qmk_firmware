@@ -157,6 +157,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 const bool KEY_NEEDS_HANDLING = true;
 const bool KEY_IS_HANDLED = false;
+/*
 const bool IGNORE_TAP_INTERRUPT = true;
 const bool DO_NOT_IGNORE_TAP_INTERRUPT = false;
 
@@ -168,6 +169,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode) {
       return false;
   }
 }
+*/
 
 void light_color(int red, int green, int blue) {
   #ifdef RGBLIGHT_ENABLE
