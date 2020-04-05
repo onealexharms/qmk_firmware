@@ -58,6 +58,7 @@
 #define ENTER KC_ENTER
 #define LESS_THAN KC_LEFT_ANGLE_BRACKET
 #define MORE_THAN  KC_RIGHT_ANGLE_BRACKET
+#define ZERO KC_0
 
 // parens layer symbols
 #define L_PAREN KC_LEFT_PAREN
@@ -104,9 +105,9 @@
 
 #define NUMBER_KEYS LAYOUT_ergodox_pretty(\
    XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
-       SAME  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX, _________ ,     KC_7  ,     KC_8  ,     KC_9  ,   DIVIDE  ,     SAME  , \
-       SAME  , _________ , _________ , _________ , _________ , _________ ,                                                          PLUS  ,     KC_4  ,     KC_5  ,     KC_6  , MULTIPLY  ,     SAME  , \
-       SAME  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX,    MINUS  ,     KC_1  ,     KC_2  ,     KC_3  ,    EQUAL  ,     SAME  , \
+       SAME  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX,     PLUS  ,     KC_7  ,     KC_8  ,     KC_9  ,   DIVIDE  ,     SAME  , \
+       SAME  , _________ , _________ , _________ , _________ , _________ ,                                                         MINUS  ,     KC_4  ,     KC_5  ,     KC_6  , MULTIPLY  ,     SAME  , \
+       SAME  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX,     ZERO  ,     KC_1  ,     KC_2  ,     KC_3  ,    EQUAL  ,     SAME  , \
    XXXXXXXXXX, XXXXXXXXXX,     SAME  , _________ , _________ ,                                                                                  KC_0  , _________ ,  DECIMAL  , XXXXXXXXXX, XXXXXXXXXX, \
                                                                                SAME  ,     SAME  ,          SAME  ,     SAME  ,                                                                         \
                                                                                        XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
