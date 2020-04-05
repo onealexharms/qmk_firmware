@@ -155,11 +155,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [NAVIGATION] = NAVIGATION_KEYS,
 };
 
+const bool KEY_NEEDS_HANDLING = true;
+const bool KEY_IS_HANDLED = false;
+const bool IGNORE_TAP_INTERRUPT = true;
+const bool DO_NOT_IGNORE_TAP_INTERRUPT = false;
 
-rgblight_config_t rgblight_config;
-bool capslock_is_on = false;
-bool KEY_NEEDS_HANDLING = true;
-bool KEY_IS_HANDLED = false;
+bool get_ignore_mod_tap_interrupt(uint16_t keycode) {
+  switch (keycode) {
+    case BKSP_CMD:
+      return true;
+    default:
+      return false;
+  }
+}
 
 void light_color(int red, int green, int blue) {
   #ifdef RGBLIGHT_ENABLE
@@ -169,6 +177,7 @@ void light_color(int red, int green, int blue) {
   #endif
 }
  
+bool capslock_is_on = false;
 void toggle_capslock(keyrecord_t *record) {
   capslock_is_on = !capslock_is_on;
   if (capslock_is_on) {
