@@ -33,7 +33,7 @@
 #define L_CTRL_ESC MT(MOD_LCTL, KC_ESC)
 #define R_SHIFT KC_RSFT
 #define R_ALT KC_RALT
-#define R_CTRL_ESC MT(MOD_RCTL, KC_ESC)
+#define R_CTRL_ESC MT(MOD_RCTL, KC_QUOTE)
 
 // layer-switching keys
 #define S_ALPHA LT(ALPHA, KC_S)
@@ -77,13 +77,11 @@
 #define BACKTICK KC_GRAVE
 #define CARET KC_CIRCUMFLEX
 #define COLONS KC_SCOLON
-#define DBL_QUOTE RSFT(KC_QUOTE)
 #define DOLLAR KC_DOLLAR
 #define EXCLAMATION KC_EXCLAIM
 #define HASH KC_HASH
 #define PERCENT KC_PERCENT
 #define PIPE KC_PIPE
-#define QUOTE KC_QUOTE
 #define TILDE KC_TILDE
 #define UNDERSCORE KC_UNDERSCORE
 
@@ -119,7 +117,7 @@
 
 #define SYMBOL_KEYS LAYOUT_ergodox_pretty(\
    XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
-       SAME  , _________ , _________ , L_BRACKET , R_BRACKET , _________ , XXXXXXXXXX,                              XXXXXXXXXX, BACKTICK  , AMPERSAND , ASTERISK  ,    TILDE  ,    QUOTE  ,     SAME  , \
+       SAME  , _________ , _________ , L_BRACKET , R_BRACKET , _________ , XXXXXXXXXX,                              XXXXXXXXXX, BACKTICK  , AMPERSAND , ASTERISK  ,    TILDE  , _________ ,     SAME  , \
        SAME  , _________ , LESS_THAN ,  L_PAREN  ,  R_PAREN  , MORE_THAN ,                                                         MINUS  ,   DOLLAR  ,  PERCENT  ,    CARET  , BACKSLASH ,     SAME  , \
        SAME  , _________ , _________ ,  L_CURLY  ,  R_CURLY  , _________ , XXXXXXXXXX,                              XXXXXXXXXX, UNDERSCORE,EXCLAMATION,  AT_SIGN  ,     HASH  ,     PIPE  ,     SAME  , \
    XXXXXXXXXX, XXXXXXXXXX,     SAME  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
