@@ -98,17 +98,17 @@
    L_CTRL_ESC,     KC_A  ,     KC_S  ,    D_NAV  , F_SYMBOLS , G_NUMBERS ,                                                       H_NUMBERS, J_SYMBOLS ,    K_NAV  ,     KC_L  , SEMICOLON ,R_CTRL_QUOT, \
     L_SHIFT  ,  Z_HYPER  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  , XXXXXXXXXX,                              XXXXXXXXXX,     KC_N  ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_SHIFT  , \
    XXXXXXXXXX, XXXXXXXXXX,    L_ALT  , _________ , _________ ,                                                                              _________ , _________ ,    R_ALT  , XXXXXXXXXX, XXXXXXXXXX, \
-                                                                            KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     KC_0  ,                                                                         \
+                                                                            KC_CAPS  , TO(ALPHA) ,      TO(ALPHA) ,     ZERO  ,                                                                         \
                                                                                        XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
                                                                   ENTER  ,  TAB_CMD  , XXXXXXXXXX,      XXXXXXXXXX, BKSP_CMD  ,    SPACE                                                                \
 )
 
 #define NUMBER_KEYS LAYOUT_ergodox_pretty(\
    XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                              XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, \
-       SAME  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX,     PLUS  ,     KC_7  ,     KC_8  ,     KC_9  ,   DIVIDE  ,     SAME  , \
-       SAME  , _________ , _________ , _________ , _________ , _________ ,                                                         MINUS  ,     KC_4  ,     KC_5  ,     KC_6  , MULTIPLY  ,     SAME  , \
+       SAME  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX,    MINUS  ,     KC_7  ,     KC_8  ,     KC_9  ,   DIVIDE  ,     SAME  , \
+       SAME  , _________ , _________ , _________ , _________ , _________ ,                                                          PLUS  ,     KC_4  ,     KC_5  ,     KC_6  , MULTIPLY  ,     SAME  , \
        SAME  , _________ , _________ , _________ , _________ , _________ , XXXXXXXXXX,                              XXXXXXXXXX,     ZERO  ,     KC_1  ,     KC_2  ,     KC_3  ,    EQUAL  ,     SAME  , \
-   XXXXXXXXXX, XXXXXXXXXX,     SAME  , _________ , _________ ,                                                                                  KC_0  , _________ ,  DECIMAL  , XXXXXXXXXX, XXXXXXXXXX, \
+   XXXXXXXXXX, XXXXXXXXXX,     SAME  , _________ , _________ ,                                                                                  ZERO  , _________ ,  DECIMAL  , XXXXXXXXXX, XXXXXXXXXX, \
                                                                                SAME  ,     SAME  ,          SAME  ,     SAME  ,                                                                         \
                                                                                        XXXXXXXXXX,      XXXXXXXXXX,                                                                                     \
                                                                    SAME  ,     SAME  , XXXXXXXXXX,      XXXXXXXXXX,     SAME  ,     SAME                                                                \
