@@ -33,9 +33,9 @@ extern uint8_t is_master;
 #define L_CMD KC_LGUI
 #define R_CMD KC_RGUI
 #define BKSP_ALT MT(MOD_RALT, KC_BSPACE)
-#define TAB_ALT MT(MOD_LALT, KC_TAB)
+#define ESC_ALT MT(MOD_LALT, KC_ESC)
 #define L_SHIFT KC_LSFT
-#define CTRL_ESC MT(MOD_LCTL, KC_ESC)
+#define TAB_CTRL MT(MOD_LCTL, KC_TAB)
 #define R_SHIFT KC_RSFT
 #define CTRL_QUOT MT(MOD_RCTL, KC_QUOTE)
 #define CAPSLOCK KC_CAPSLOCK
@@ -104,37 +104,32 @@ enum layers {
   LAYER_COUNT
 };
 
-// What the hecks is this? --Alex, May 2020
-enum macro_keycodes {
-  KC_SAMPLEMACRO,
-};
-
 #define ALPHA_KEYS LAYOUT( \
     CAPSLOCK  ,     KC_Q  ,     KC_W  ,     KC_E  ,     KC_R  ,     KC_T  ,                  KC_Y     ,     KC_U  ,     KC_I  ,     KC_O  ,     KC_P  ,TO(NUMBERS), \
-    CTRL_ESC  ,     KC_A  , S_NUMBERS ,    D_NAV  , F_SYMBOLS ,     KC_G  ,                  KC_H     , J_SYMBOLS ,    K_NAV  , L_NUMBERS , SEMICOLON ,  CTRL_QUOT, \
+    TAB_CTRL  ,     KC_A  , S_NUMBERS ,    D_NAV  , F_SYMBOLS ,     KC_G  ,                  KC_H     , J_SYMBOLS ,    K_NAV  , L_NUMBERS , SEMICOLON ,  CTRL_QUOT, \
     L_SHIFT   ,     KC_Z  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  ,                  KC_N     ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_SHIFT  , \
-                                              L_CMD    ,  TAB_ALT   ,  ENTER   ,       BKSP_ALT  ,  SPACE ,  R_CMD                                                  \
+                                               L_CMD     ,   ENTER   ,     ESC_ALT,  BKSP_ALT  ,  SPACE  ,  R_CMD                                                  \
 )
 
 #define NUMBER_KEYS LAYOUT( \
     _________ , _________ , _________ , _________ , _________ , _________ ,                   EQUAL   ,  KC_7     ,  KC_8     ,  KC_9     , _________ , TO(ALPHA) ,\
-    CTRL_ESC  , _________ , _________ , _________ , _________ , _________ ,                   MINUS   ,  KC_4     ,  KC_5     ,  KC_6     , _________ , _________ ,\
+    TAB_CTRL  , _________ , _________ , _________ , _________ , _________ ,                   MINUS   ,  KC_4     ,  KC_5     ,  KC_6     , _________ , _________ ,\
     _________ , _________ , _________ , _________ , _________ , _________ ,                   PLUS    ,  KC_1     ,  KC_2     ,  KC_3     ,  DECIMAL  , _________ ,\
-                                              L_CMD    ,  TAB_ALT   ,  ENTER   ,       BKSP_ALT  ,  SPACE ,  ZERO                                                  \
+                                               L_CMD     ,   ENTER   ,     ESC_ALT,  BKSP_ALT  ,  SPACE  ,  ZERO                                                  \
 )
 
 #define SYMBOL_KEYS LAYOUT( \
     _________ , _________ , _________ , L_BRACKET , R_BRACKET , _________ ,                  BACKTICK , AMPERSAND ,  ASTERISK ,  TILDE    , _________ , _________ ,\
-    CTRL_ESC  , _________ , LESS_THAN ,  L_PAREN  ,  R_PAREN  , MORE_THAN ,                   MINUS   ,  DOLLAR   ,  PERCENT  ,  CARET    ,  PIPE     , _________ ,\
+    TAB_CTRL  , _________ , LESS_THAN ,  L_PAREN  ,  R_PAREN  , MORE_THAN ,                   MINUS   ,  DOLLAR   ,  PERCENT  ,  CARET    ,  PIPE     , _________ ,\
     _________ , _________ , _________ ,  L_CURLY  ,  R_CURLY  , _________ ,                 UNDERSCORE,EXCLAMATION,  AT_SIGN  ,  HASH     , BACKSLASH , _________ ,\
-                                              L_CMD    ,  TAB_ALT   ,  ENTER   ,       BKSP_ALT  ,  SPACE ,  R_CMD                                                 \
+                                               L_CMD     ,   ENTER   ,     ESC_ALT,  BKSP_ALT  ,  SPACE  ,  R_CMD                                                  \
 )
 
 #define NAVIGATION_KEYS LAYOUT( \
     _________ , _________ ,  PREV     ,  NEXT     ,  VOL_UP   , _________ ,                 _________ ,  RESET    , _________ , _________ , _________ , _________ ,\
-    CTRL_ESC  , _________ ,  MUTE     , PLAY_PAUSE,  VOL_DOWN , _________ ,                 KC_LEFT   ,  KC_DOWN  ,  KC_UP    ,  KC_RIGHT ,  WHEEL_UP , _________ ,\
+    TAB_CTRL  , _________ ,  MUTE     , PLAY_PAUSE,  VOL_DOWN , _________ ,                 KC_LEFT   ,  KC_DOWN  ,  KC_UP    ,  KC_RIGHT ,  WHEEL_UP , _________ ,\
     _________ , _________ , _________ , LEFT_CLICK,RIGHT_CLICK, _________ ,                MOUSE_LEFT , MOUSE_DOWN,  MOUSE_UP ,  MOUSE_RT ,WHEEL_DOWN , _________ ,\
-                                              L_CMD    ,  TAB_ALT   ,  ENTER   ,       BKSP_ALT  ,  SPACE ,  R_CMD                                                 \
+                                               L_CMD     ,   ENTER   ,     ESC_ALT,  BKSP_ALT  ,  SPACE  ,  R_CMD                                                  \
 )
 
 const uint16_t PROGMEM keymaps[LAYER_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
