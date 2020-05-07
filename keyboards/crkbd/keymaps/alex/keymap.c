@@ -43,8 +43,8 @@ extern uint8_t is_master;
 // layer-switching keys
 #define D_NAV LT(NAVIGATION, KC_D)
 #define F_SYMBOLS LT(SYMBOLS, KC_F)
-#define G_NUMBERS LT(NUMBERS, KC_G)
-#define H_NUMBERS LT(NUMBERS, KC_H)
+#define S_NUMBERS LT(NUMBERS, KC_S)
+#define L_NUMBERS LT(NUMBERS, KC_L)
 #define J_SYMBOLS LT(SYMBOLS, KC_J)
 #define K_NAV LT(NAVIGATION, KC_K)
 
@@ -106,7 +106,7 @@ enum layers {
 
 #define ALPHA_KEYS LAYOUT( \
     CAPSLOCK  ,     KC_Q  ,     KC_W  ,     KC_E  ,     KC_R  ,     KC_T  ,                  KC_Y     ,     KC_U  ,     KC_I  ,     KC_O  ,     KC_P  ,TO(NUMBERS), \
-    TAB_CTRL  ,     KC_A  ,     KC_S  ,    D_NAV  , F_SYMBOLS , G_NUMBERS ,                H_NUMBERS  , J_SYMBOLS ,    K_NAV  ,     KC_L  , SEMICOLON ,  CTRL_QUOT, \
+    TAB_CTRL  ,     KC_A  ,S_NUMBERS  ,    D_NAV  , F_SYMBOLS ,     KC_G  ,                  KC_H     , J_SYMBOLS ,    K_NAV  , L_NUMBERS , SEMICOLON ,  CTRL_QUOT, \
     L_SHIFT   ,     KC_Z  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  ,                  KC_N     ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_SHIFT  , \
                                                L_CMD     ,   ENTER   ,     ESC_ALT,  BKSP_ALT  ,  SPACE  ,  R_CMD                                                  \
 )
