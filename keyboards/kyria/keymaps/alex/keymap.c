@@ -12,35 +12,29 @@
 #define MUTE KC_AUDIO_MUTE
 #define PLAY_PAUSE KC_MEDIA_PLAY_PAUSE
 
-// mouse keys
-#define RIGHT_CLICK  KC_MS_BTN2
-#define LEFT_CLICK KC_MS_BTN1
-#define MOUSE_LEFT KC_MS_LEFT
-#define MOUSE_RT KC_MS_RIGHT
-#define MOUSE_UP KC_MS_UP
-#define MOUSE_DOWN KC_MS_DOWN
-#define WHEEL_UP KC_MS_WH_UP
-#define WHEEL_DOWN KC_MS_WH_DOWN
-
 // modifiers and command keys
-#define L_CMD KC_LGUI
-#define R_CMD KC_RGUI
+#define LEFT_ALT KC_LALT
+#define L_CMD_ESC MT(MOD_LGUI, KC_ESC)
+#define ENTER KC_ENTER
+#define TAB KC_TAB
 #define BACKSPACE KC_BSPACE
-#define ESC_ALT MT(MOD_LALT, KC_ESC)
-#define ALT KC_RALT
-#define L_SHIFT KC_LSFT
+#define SPACE KC_SPACE
+#define R_CMD_ESC MT(MOD_RGUI, KC_ESC)
+#define RIGHT_ALT KC_RALT
 #define L_CTRL KC_LCTL
-#define SHIFT_QUOT MT(MOD_RSFT, KC_QUOT)
-#define R_CTRL KC_RCTL
+#define L_SHIFT KC_LSFT
 #define CAPSLOCK KC_CAPSLOCK
+#define R_CTRL KC_RCTL
+#define SHIFT_QUOT MT(MOD_RSFT, KC_QUOT)
+#define NUMLOCK TG(NUMBERS)
 
-// layer-switching keys
+// layer-switching alpha keys
+#define S_NUMBERS LT(NUMBERS, KC_S)
 #define D_NAV LT(NAVIGATION, KC_D)
 #define F_SYMBOLS LT(SYMBOLS, KC_F)
-#define S_NUMBERS LT(NUMBERS, KC_S)
-#define L_NUMBERS LT(NUMBERS, KC_L)
 #define J_SYMBOLS LT(SYMBOLS, KC_J)
 #define K_NAV LT(NAVIGATION, KC_K)
+#define L_NUMBERS LT(NUMBERS, KC_L)
 
 // numbers layer symbols
 #define PLUS KC_PLUS
@@ -49,17 +43,14 @@
 #define MULTIPLY KC_ASTERISK
 #define EQUAL KC_EQUAL
 #define DECIMAL KC_DOT
+#define ZERO KC_0
 
-// alpha layer symbols
-#define SPACE KC_SPACE
+// alpha layer
 #define PERIOD KC_DOT
-#define ENTER KC_ENTER
 #define LESS_THAN KC_LEFT_ANGLE_BRACKET
 #define MORE_THAN  KC_RIGHT_ANGLE_BRACKET
-#define ZERO KC_0
-#define TAB KC_TAB
 
-// parens layer symbols
+// parens layer 
 #define L_PAREN KC_LEFT_PAREN
 #define R_PAREN KC_RIGHT_PAREN
 #define L_BRACKET KC_LBRC
@@ -67,7 +58,7 @@
 #define L_CURLY KC_LCBR
 #define R_CURLY KC_RCBR
 
-// symbols layer symbols
+// symbols layer
 #define AMPERSAND KC_AMPERSAND
 #define ASTERISK KC_ASTERISK
 #define AT_SIGN KC_AT
@@ -76,12 +67,12 @@
 #define CARET KC_CIRCUMFLEX
 #define SEMICOLON KC_SCOLON
 #define DOLLAR KC_DOLLAR
-#define EXCLAMATION KC_EXCLAIM
+#define BANG KC_EXCLAIM
 #define HASH KC_HASH
 #define PERCENT KC_PERCENT
 #define PIPE KC_PIPE
 #define TILDE KC_TILDE
-#define UNDERSCORE KC_UNDERSCORE
+#define UNDERLINE KC_UNDERSCORE
 
 // colors
 #define RED 255,0,0
@@ -100,32 +91,32 @@ enum layers {
 };
 
 #define ALPHA_KEYS LAYOUT( \
-  L_CTRL    ,     KC_Q  ,     KC_W  ,     KC_E  ,     KC_R  ,     KC_T  ,                                        KC_Y    ,     KC_U  ,     KC_I  ,     KC_O  ,     KC_P  ,  R_CTRL   , \
-  L_SHIFT   ,     KC_A  ,S_NUMBERS  ,    D_NAV  , F_SYMBOLS ,     KC_G  ,                                        KC_H    , J_SYMBOLS ,    K_NAV  , L_NUMBERS , SEMICOLON , SHIFT_QUOT, \
-  CAPSLOCK  ,     KC_Z  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  , NADA , NADA    ,     NADA ,     NADA,  KC_N    ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,TO(NUMBERS), \
-                              _________ ,     L_CMD ,    ENTER ,         TAB  , ESC_ALT  ,       ALT ,BACKSPACE,      SPACE ,     R_CMD ,    _________                                 \
+  L_CTRL    ,     KC_Q  ,     KC_W  ,     KC_E  ,     KC_R  ,     KC_T  ,                                      KC_Y    ,     KC_U  ,     KC_I  ,     KC_O  ,     KC_P  ,  R_CTRL   ,\
+  L_SHIFT   ,     KC_A  ,S_NUMBERS  ,    D_NAV  , F_SYMBOLS ,     KC_G  ,                                      KC_H    , J_SYMBOLS ,    K_NAV  , L_NUMBERS , SEMICOLON , SHIFT_QUOT,\
+  CAPSLOCK  ,     KC_Z  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  , NADA , NADA ,         NADA ,  NADA , KC_N    ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,TG(NUMBERS),\
+                              _________ ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  _________                              \
   )
 
 #define NUMBER_KEYS LAYOUT(\
-  L_CTRL    , _________ , _________ , _________ , _________ , _________ ,                                        EQUAL   ,  KC_7     ,  KC_8     ,  KC_9     , _________ ,  R_CTRL   ,\
-  L_SHIFT   , _________ , _________ , _________ , _________ , _________ ,                                        MINUS   ,  KC_4     ,  KC_5     ,  KC_6     , _________ ,SHIFT_QUOT ,\
-  CAPSLOCK  , _________ , _________ , _________ , _________ , _________ , NADA , NADA    ,     NADA ,     NADA,  PLUS    ,  KC_1     ,  KC_2     ,  KC_3     ,  DECIMAL  ,TO(ALPHA)  ,\
-                              _________ ,     L_CMD ,    ENTER ,         TAB  , ESC_ALT  ,       ALT ,BACKSPACE,      SPACE ,      ZERO ,    _________                                \
+  L_CTRL    , _________ , _________ , _________ , _________ , _________ ,                                      EQUAL   ,  KC_7     ,  KC_8     ,  KC_9     , _________ ,  R_CTRL   ,\
+  L_SHIFT   , _________ , _________ , _________ , _________ , _________ ,                                      MINUS   ,  KC_4     ,  KC_5     ,  KC_6     , _________ ,SHIFT_QUOT ,\
+  CAPSLOCK  , _________ , _________ , _________ , _________ , _________ , NADA , NADA ,        NADA ,   NADA , PLUS    ,  KC_1     ,  KC_2     ,  KC_3     ,  DECIMAL  ,TG(NUMBERS),\
+                              _________ ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  _________                              \
   )
 
 #define SYMBOL_KEYS LAYOUT( \
-  L_CTRL    , _________ , _________ , L_BRACKET , R_BRACKET , _________ ,                                        BACKTICK, AMPERSAND ,  ASTERISK ,  TILDE    , _________ ,  R_CTRL   ,\
-  L_SHIFT   , _________ , LESS_THAN ,  L_PAREN  ,  R_PAREN  , MORE_THAN ,                                        MINUS   ,  DOLLAR   ,  PERCENT  ,  CARET    ,  PIPE     ,SHIFT_QUOT ,\
-  CAPSLOCK  , _________ , _________ ,  L_CURLY  ,  R_CURLY  , _________ , NADA , NADA    ,     NADA ,     NADA,UNDERSCORE,EXCLAMATION,  AT_SIGN  ,  HASH     , BACKSLASH ,TO(NUMBERS),\
-                              _________ ,     L_CMD ,    ENTER ,         TAB  , ESC_ALT  ,       ALT ,BACKSPACE,      SPACE ,     R_CMD ,    _________                                \
+  L_CTRL    , _________ , _________ , L_BRACKET , R_BRACKET , _________ ,                                      BACKTICK, AMPERSAND ,  ASTERISK ,  TILDE    , _________ ,  R_CTRL   ,\
+  L_SHIFT   , _________ , LESS_THAN ,  L_PAREN  ,  R_PAREN  , MORE_THAN ,                                      MINUS   ,  DOLLAR   ,  PERCENT  ,  CARET    ,  PIPE     ,SHIFT_QUOT ,\
+  CAPSLOCK  , _________ , _________ ,  L_CURLY  ,  R_CURLY  , _________ , NADA , NADA ,        NADA ,   NADA ,UNDERLINE,  BANG     ,  AT_SIGN  ,  HASH     , BACKSLASH ,TG(NUMBERS),\
+                              _________ ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  _________                              \
   )
 
 #define NAVIGATION_KEYS LAYOUT( \
-  L_CTRL    , _________ ,  PREV     ,  NEXT     ,  VOL_UP   , _________ ,                                      _________ ,  RESET    , _________ , _________ , _________ ,  R_CTRL   ,\
-  L_SHIFT   , _________ ,  MUTE     , PLAY_PAUSE,  VOL_DOWN , _________ ,                                      KC_LEFT   ,  KC_DOWN  ,  KC_UP    ,  KC_RIGHT ,  WHEEL_UP ,SHIFT_QUOT ,\
-  CAPSLOCK  , _________ , _________ , LEFT_CLICK,RIGHT_CLICK, _________ , NADA , NADA    ,     NADA ,     NADA,MOUSE_LEFT, MOUSE_DOWN,  MOUSE_UP ,  MOUSE_RT ,WHEEL_DOWN ,TO(NUMBERS),\
-                              _________ ,     L_CMD ,    ENTER ,         TAB  , ESC_ALT  ,       ALT ,BACKSPACE,      SPACE ,     R_CMD ,    _________                                \
-  )
+  L_CTRL    , _________ ,  PREV     ,  NEXT     ,  VOL_UP   , _________ ,                                     _________ ,  RESET    , _________ , _________ , _________ ,  R_CTRL   ,\
+  L_SHIFT   , _________ ,  MUTE     , PLAY_PAUSE,  VOL_DOWN , _________ ,                                     KC_LEFT   ,  KC_DOWN  ,  KC_UP    ,  KC_RIGHT , _________ ,SHIFT_QUOT ,\
+  CAPSLOCK  , _________ , _________ , _________ , _________ , _________ , NADA , NADA ,        NADA ,   NADA ,_________ , _________ , _________ , _________ , _________ ,TG(NUMBERS),\
+                              _________ ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  _________                               \
+  ) 
 
 const uint16_t PROGMEM keymaps[LAYER_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
   [ALPHA] = ALPHA_KEYS,
