@@ -177,16 +177,16 @@ static void render_status(void) {
     // oled_write_P(PSTR("Layer: "), false);
     switch (get_highest_layer(layer_state)) {
         case ALPHA:
-            oled_write_P(PSTR("Alpha\n"), false);
+            oled_write_P(PSTR("ALPHA\n"), false);
             break;
         case NUMBERS:
-            oled_write_P(PSTR("Numbers\n"), false);
+            oled_write_P(PSTR("NUMBERS\n"), false);
             break;
         case SYMBOLS:
-            oled_write_P(PSTR("Symbols\n"), false);
+            oled_write_P(PSTR("SYMBOLS\n"), false);
             break;
         case NAVIGATION:
-            oled_write_P(PSTR("Navigation\n"), false);
+            oled_write_P(PSTR("NAVIGATION\n"), false);
             break;
         default:
             oled_write_P(PSTR("Undefined\n"), false);
