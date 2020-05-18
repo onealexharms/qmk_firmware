@@ -174,7 +174,7 @@ static void render_status(void) {
     oled_write_P(PSTR("       Kyria rev1.0\n\n"), false);
 
     // Host Keyboard Layer Status
-    oled_write_P(PSTR("Layer: "), false);
+    // oled_write_P(PSTR("Layer: "), false);
     switch (get_highest_layer(layer_state)) {
         case ALPHA:
             oled_write_P(PSTR("Alpha\n"), false);
