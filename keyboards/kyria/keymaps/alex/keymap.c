@@ -101,7 +101,7 @@ enum layers {
   L_CTRL    , _________ , _________ , _________ , _________ , _________ ,                                      EQUAL   ,  KC_7     ,  KC_8     ,  KC_9     , _________ ,  R_CTRL   ,\
   L_SHIFT   , _________ , _________ , _________ , _________ , _________ ,                                      MINUS   ,  KC_4     ,  KC_5     ,  KC_6     , _________ ,SHIFT_QUOT ,\
   CAPSLOCK  , _________ , _________ , _________ , _________ , _________ , NADA , NADA ,        NADA ,   NADA , PLUS    ,  KC_1     ,  KC_2     ,  KC_3     ,  DECIMAL  ,TG(NUMBERS),\
-                              _________ ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  _________                              \
+                              _________ ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,     ZERO  ,  RIGHT_ALT   ,  _________                              \
   )
 
 #define SYMBOL_KEYS LAYOUT( \
