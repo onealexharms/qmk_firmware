@@ -103,7 +103,6 @@ program: $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).eep check-size
 	$(PROGRAM_CMD)
 
 define EXEC_TEENSY
-	cp "keyboards/ergodox_ez/keymaps/alex/keymap.c" "keyboards/ergodox_ez/keymaps/alex/latest_flashed_keymap.c"
 	$(TEENSY_LOADER_CLI) -mmcu=$(MCU) -w -v $(BUILD_DIR)/$(TARGET).hex
 endef
 
