@@ -3,6 +3,7 @@
 // utility things
 #define _________ KC_NO
 #define ____ KC_NO
+#define SLEEP KC_SYSTEM_SLEEP
 
 // media control keys
 #define VOL_UP KC_AUDIO_VOL_UP
@@ -105,7 +106,7 @@ enum layers {
   )
 
 #define SYMBOL_KEYS LAYOUT( \
-  _________ , _________ , _________ , L_BRACKET , R_BRACKET , _________ ,                                      BACKTICK, AMPERSAND ,  ASTERISK ,  TILDE    , _________ , _________ ,\
+  SLEEP     , _________ , _________ , L_BRACKET , R_BRACKET , _________ ,                                      BACKTICK, AMPERSAND ,  ASTERISK ,  TILDE    , _________ , SLEEP     ,\
   L_SHIFT   , _________ , LESS_THAN ,  L_PAREN  ,  R_PAREN  , MORE_THAN ,                                      MINUS   ,  DOLLAR   ,  PERCENT  ,  CARET    ,  PIPE     , SHIFT_QUOT,\
   L_CTRL    , _________ , _________ ,  L_CURLY  ,  R_CURLY  , _________ , ____ , ____ ,         ____ ,  ____ ,UNDERLINE,  BANG     ,  AT_SIGN  ,  HASH     , BACKSLASH ,  R_CTRL   ,\
                                CAPSLOCK ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  NUMLOCK                                \
