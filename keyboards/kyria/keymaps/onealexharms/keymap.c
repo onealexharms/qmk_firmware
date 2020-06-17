@@ -4,6 +4,7 @@
 #define _________ KC_NO
 #define ____ KC_NO
 #define SLEEP KC_SYSTEM_SLEEP
+#define TRANSPARENT KC_TRANSPARENT
 
 // media control keys
 #define VOL_UP KC_AUDIO_VOL_UP
@@ -33,7 +34,7 @@
 #define S_NUMBERS LT(NUMBERS, KC_S)
 #define D_NAV LT(NAVIGATION, KC_D)
 #define F_SYMBOLS LT(SYMBOLS, KC_F)
-#define J_SYMBOLS LT(SYMBOLS, KC_J)
+#define J_PARENS LT(PARENS, KC_J)
 #define K_NAV LT(NAVIGATION, KC_K)
 #define L_NUMBERS LT(NUMBERS, KC_L)
 
@@ -87,14 +88,17 @@ enum layers {
   ALPHA,
   NUMBERS,
   SYMBOLS,
+  PARENS,
   NAVIGATION,
   LAYER_COUNT
 };
 
+#define COLORS RGB_MODE_RGBTEST
+
 #define ALPHA_KEYS LAYOUT( \
-  _________ ,     KC_Q  ,     KC_W  ,     KC_E  ,     KC_R  ,     KC_T  ,                                      KC_Y    ,     KC_U  ,     KC_I  ,     KC_O  ,     KC_P  , _________ ,\
-  L_SHIFT   ,     KC_A  ,S_NUMBERS  ,    D_NAV  , F_SYMBOLS ,     KC_G  ,                                      KC_H    , J_SYMBOLS ,    K_NAV  , L_NUMBERS , SEMICOLON , SHIFT_QUOT,\
-  L_CTRL    ,     KC_Z  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  , PLAY_PAUSE, NEXT,   VOL_UP , VOL_DN, KC_N    ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_CTRL   ,\
+  COLORS    ,     KC_Q  ,     KC_W  ,     KC_E  ,     KC_R  ,     KC_T  ,                                      KC_Y    ,     KC_U  ,     KC_I  ,     KC_O  ,     KC_P  , _________ ,\
+  L_SHIFT   ,     KC_A  ,S_NUMBERS  ,    D_NAV  , F_SYMBOLS ,     KC_G  ,                                      KC_H    , J_PARENS  ,    K_NAV  , L_NUMBERS , SEMICOLON , SHIFT_QUOT,\
+  L_CTRL    ,     KC_Z  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  , PLAY_PAUSE, NEXT,   VOL_DN , VOL_UP, KC_N    ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_CTRL   ,\
                                CAPSLOCK ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  NUMLOCK                                \
   )
 
@@ -106,9 +110,16 @@ enum layers {
   )
 
 #define SYMBOL_KEYS LAYOUT( \
-  SLEEP     , _________ , _________ , L_BRACKET , R_BRACKET , _________ ,                                      BACKTICK, AMPERSAND ,  ASTERISK ,  TILDE    , _________ , SLEEP     ,\
-  L_SHIFT   , _________ , LESS_THAN ,  L_PAREN  ,  R_PAREN  , MORE_THAN ,                                      MINUS   ,  DOLLAR   ,  PERCENT  ,  CARET    ,  PIPE     , SHIFT_QUOT,\
-  L_CTRL    , _________ , _________ ,  L_CURLY  ,  R_CURLY  , _________ , ____ , ____ ,         ____ ,  ____ ,UNDERLINE,  BANG     ,  AT_SIGN  ,  HASH     , BACKSLASH ,  R_CTRL   ,\
+  SLEEP     , _________ , _________ , _________ , _________ , _________ ,                                      BACKTICK, AMPERSAND ,  ASTERISK ,  TILDE    , _________ , _________ ,\
+  L_SHIFT   , _________ , _________ , _________ ,TRANSPARENT, _________ ,                                      MINUS   ,  DOLLAR   ,  PERCENT  ,  CARET    ,  PIPE     , SHIFT_QUOT,\
+  L_CTRL    , _________ , _________ , _________ , _________ , _________ , ____ , ____ ,         ____ ,  ____ ,UNDERLINE,  BANG     ,  AT_SIGN  ,  HASH     , BACKSLASH ,  R_CTRL   ,\
+                               CAPSLOCK ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  NUMLOCK                                \
+  )
+
+#define PARENS_KEYS LAYOUT( \
+  SLEEP     , _________ , _________ , L_BRACKET , R_BRACKET , _________ ,                                    _________ , _________ , _________ , _________ , _________ , _________ ,\
+  L_SHIFT   , _________ , LESS_THAN ,  L_PAREN  ,  R_PAREN  , MORE_THAN ,                                    _________ ,TRANSPARENT, _________ , _________ , _________ , SHIFT_QUOT,\
+  L_CTRL    , _________ , _________ ,  L_CURLY  ,  R_CURLY  , _________ , ____ , ____ ,         ____ ,  ____ ,_________, _________ , _________ , _________ , _________ ,  R_CTRL   ,\
                                CAPSLOCK ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  NUMLOCK                                \
   )
 
@@ -123,6 +134,7 @@ const uint16_t PROGMEM keymaps[LAYER_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
   [ALPHA] = ALPHA_KEYS,
   [NUMBERS] = NUMBER_KEYS, 
   [SYMBOLS] = SYMBOL_KEYS, 
+  [PARENS] = PARENS_KEYS,
   [NAVIGATION] = NAVIGATION_KEYS, 
 };
 
@@ -130,10 +142,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
     }
     return true;
-}
+} 
 
 #ifdef OLED_DRIVER_ENABLE
-oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+  oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 	return OLED_ROTATION_180;
 }
 
