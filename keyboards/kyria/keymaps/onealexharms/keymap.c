@@ -96,38 +96,38 @@ enum layers {
 #define COLORS RGB_MODE_RGBTEST
 
 #define ALPHA_KEYS LAYOUT( \
-  COLORS    ,     KC_Q  ,     KC_W  ,     KC_E  ,     KC_R  ,     KC_T  ,                                      KC_Y    ,     KC_U  ,     KC_I  ,     KC_O  ,     KC_P  , _________ ,\
-  L_CTRL    ,     KC_A  ,S_NUMBERS  ,    D_NAV  , F_SYMBOLS ,     KC_G  ,                                      KC_H    , J_PARENS  ,    K_NAV  , L_NUMBERS , SEMICOLON , CTRL_QUOT,\
-  L_SHIFT   ,     KC_Z  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  , PLAY_PAUSE, NEXT,   VOL_DN , VOL_UP, KC_N    ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_SHIFT   ,\
-                               CAPSLOCK ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  NUMLOCK                                \
+  CAPSLOCK  ,     KC_Q  ,     KC_W  ,     KC_E  ,     KC_R  ,     KC_T  ,                                      KC_Y    ,     KC_U  ,     KC_I  ,     KC_O  ,     KC_P  , NUMLOCK  ,\
+  L_CTRL    ,     KC_A  ,S_NUMBERS  ,    D_NAV  , F_SYMBOLS ,     KC_G  ,                                      KC_H    , J_PARENS  ,     KC_K  , L_NUMBERS , SEMICOLON , CTRL_QUOT,\
+  L_SHIFT   ,     KC_Z  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  , PLAY_PAUSE, NEXT,   VOL_DN , VOL_UP, KC_N    ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_SHIFT ,\
+                               ALPHA   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  ALPHA                                  \
   )
 
 #define NUMBER_KEYS LAYOUT(\
-  CAPSLOCK  , _________ , _________ , _________ , _________ , _________ ,                                      EQUAL   ,  KC_7     ,  KC_8     ,  KC_9     , _________ , _________ ,\
+  CAPSLOCK  , _________ , _________ , _________ , _________ , _________ ,                                      EQUAL   ,  KC_7     ,  KC_8     ,  KC_9     , _________ , NUMLOCK  ,\
   L_CTRL    , _________ , _________ , _________ , _________ , _________ ,                                      MINUS   ,  KC_4     ,  KC_5     ,  KC_6     , _________ , CTRL_QUOT,\
-  L_SHIFT   , _________ , _________ , _________ , _________ , _________ , ____ , ____ ,         ____ ,  ____ , PLUS    ,  KC_1     ,  KC_2     ,  KC_3     ,  DECIMAL  ,  R_SHIFT   ,\
-                              CAPSLOCK ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,        BACKSPACE,   SPACE,     ZERO  ,  RIGHT_ALT   ,  NUMLOCK                                \
+  L_SHIFT   , _________ , _________ , _________ , _________ , _________ , ____ , ____ ,         ____ ,  ____ , PLUS    ,  KC_1     ,  KC_2     ,  KC_3     ,  DECIMAL  ,  R_SHIFT ,\
+                               ALPHA   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,        BACKSPACE,   SPACE,     ZERO  ,  RIGHT_ALT   ,  ALPHA                                 \
   )
 
 #define SYMBOL_KEYS LAYOUT( \
-  CAPSLOCK  , _________ , _________ , _________ , _________ , _________ ,                                      BACKTICK, AMPERSAND ,  ASTERISK ,  TILDE    , _________ , _________ ,\
+  CAPSLOCK  , _________ , _________ , _________ , _________ , _________ ,                                      BACKTICK, AMPERSAND ,  ASTERISK ,  TILDE    , _________ , NUMLOCK  ,\
   L_CTRL    , _________ , _________ , _________ ,TRANSPARENT, _________ ,                                      MINUS   ,  DOLLAR   ,  PERCENT  ,  CARET    ,  PIPE     , CTRL_QUOT,\
-  L_SHIFT   , _________ , _________ , _________ , _________ , _________ , ____ , ____ ,         ____ ,  ____ ,UNDERLINE,  BANG     ,  AT_SIGN  ,  HASH     , BACKSLASH ,  R_SHIFT   ,\
-                               CAPSLOCK ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  NUMLOCK                                \
+  L_SHIFT   , _________ , _________ , _________ , _________ , _________ , ____ , ____ ,         ____ ,  ____ ,UNDERLINE,  BANG     ,  AT_SIGN  ,  HASH     , BACKSLASH ,  R_SHIFT ,\
+                                ALPHA   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  ALPHA                                 \
   )
 
 #define PARENS_KEYS LAYOUT( \
-  CAPSLOCK  , _________ , _________ , L_BRACKET , R_BRACKET , _________ ,                                    _________ , _________ , _________ , _________ , _________ , _________ ,\
+  CAPSLOCK  , _________ , _________ , L_BRACKET , R_BRACKET , _________ ,                                    _________ , _________ , _________ , _________ , _________ , NUMLOCK  ,\
   L_CTRL    , _________ , LESS_THAN ,  L_PAREN  ,  R_PAREN  , MORE_THAN ,                                    _________ ,TRANSPARENT, _________ , _________ , _________ , CTRL_QUOT,\
-  L_SHIFT   , _________ , _________ ,  L_CURLY  ,  R_CURLY  , _________ , ____ , ____ ,         ____ ,  ____ ,_________, _________ , _________ , _________ , _________ ,  R_SHIFT   ,\
-                               CAPSLOCK ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  NUMLOCK                                \
+  L_SHIFT   , _________ , _________ ,  L_CURLY  ,  R_CURLY  , _________ , PREV , ____ ,         ____ ,  ____ ,_________, _________ , _________ , _________ , _________ ,  R_SHIFT ,\
+                                 ALPHA   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  ALPHA                                \
   )
 
 #define NAVIGATION_KEYS LAYOUT( \
-  CAPSLOCK  , _________ ,  PREV     ,  NEXT     ,  VOL_UP   , _________ ,                                     _________ ,  RESET    , _________ , _________ , _________ , _________ ,\
-  L_CTRL    , _________ ,  MUTE     , PLAY_PAUSE,  VOL_DN   , _________ ,                                     KC_LEFT   ,  KC_DOWN  ,  KC_UP    ,  KC_RIGHT , _________ , CTRL_QUOT,\
-  L_SHIFT   , _________ , _________ , _________ , _________ , _________ , ____ , ____ ,         ____ ,  ____ ,_________ , _________ , _________ , _________ , _________ ,  R_SHIFT   ,\
-                               CAPSLOCK ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  NUMLOCK                                 \
+  CAPSLOCK  , _________ , _________ , _________ , _________ , _________ ,                                     _________ ,  RESET    , _________ , _________ , _________ , NUMLOCK  ,\
+  L_CTRL    , _________ , _________ , _________ , _________ , _________ ,                                     KC_LEFT   ,  KC_DOWN  ,  KC_UP    ,  KC_RIGHT , _________ , CTRL_QUOT,\
+  L_SHIFT   , _________ , _________ , _________ , _________ , _________ , ____ , ____ ,         ____ ,  ____ ,_________ , _________ , _________ , _________ , _________ ,  R_SHIFT ,\
+                                 ALPHA   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  ALPHA                                 \
   ) 
 
 const uint16_t PROGMEM keymaps[LAYER_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
