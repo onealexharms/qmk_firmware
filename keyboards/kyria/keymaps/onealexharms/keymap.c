@@ -125,7 +125,7 @@ enum layers {
 
 #define NAVIGATION_KEYS LAYOUT( \
   CAPSLOCK  , _________ , _________ , _________ , _________ , _________ ,                                     _________ ,  RESET    , _________ , _________ , _________ , NUMLOCK  ,\
-  L_CTRL    , _________ , _________ , _________ , _________ , _________ ,                                     KC_LEFT   ,  KC_DOWN  ,  KC_UP    ,  KC_RIGHT , _________ , CTRL_QUOT,\
+  L_CTRL    , _________ , _________ ,TRANSPARENT, _________ , _________ ,                                     KC_LEFT   ,  KC_DOWN  ,  KC_UP    ,  KC_RIGHT , _________ , CTRL_QUOT,\
   L_SHIFT   , _________ , _________ , _________ , _________ , _________ , ____ , ____ ,         ____ ,  ____ ,_________ , _________ , _________ , _________ , _________ ,  R_SHIFT ,\
                                  ALPHA   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  ALPHA                                 \
   ) 
