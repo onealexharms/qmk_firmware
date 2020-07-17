@@ -29,6 +29,7 @@
 #define R_SHIFT KC_RSFT
 #define CTRL_QUOT MT(MOD_RCTL, KC_QUOT)
 #define NUMLOCK TG(NUMBERS)
+#define HYPER KC_HYPR
 
 // layer-switching alpha keys
 #define S_NUMBERS LT(NUMBERS, KC_S)
@@ -97,37 +98,37 @@ enum layers {
 
 #define ALPHA_KEYS LAYOUT( \
   CAPSLOCK  ,     KC_Q  ,     KC_W  ,     KC_E  ,     KC_R  ,     KC_T  ,                                      KC_Y    ,     KC_U  ,     KC_I  ,     KC_O  ,     KC_P  , NUMLOCK  ,\
-  L_CTRL    ,     KC_A  ,S_NUMBERS  ,    D_NAV  , F_SYMBOLS ,     KC_G  ,                                      KC_H    , J_PARENS  ,     KC_K  , L_NUMBERS , SEMICOLON , CTRL_QUOT,\
+  L_CTRL    ,     KC_A  ,S_NUMBERS  ,    D_NAV  , F_SYMBOLS ,     KC_G  ,                                      KC_H    , J_PARENS  ,     KC_K  ,     KC_L  , SEMICOLON , CTRL_QUOT,\
   L_SHIFT   ,     KC_Z  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  , PLAY_PAUSE, NEXT,   VOL_DN , VOL_UP, KC_N    ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_SHIFT ,\
-                               ALPHA   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  ALPHA                                  \
+                               HYPER   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  HYPER                                  \
   )
 
 #define NUMBER_KEYS LAYOUT(\
   CAPSLOCK  , _________ , _________ , _________ , _________ , _________ ,                                      EQUAL   ,  KC_7     ,  KC_8     ,  KC_9     , _________ , NUMLOCK  ,\
-  L_CTRL    , _________ , _________ , _________ , _________ , _________ ,                                      MINUS   ,  KC_4     ,  KC_5     ,  KC_6     , _________ , CTRL_QUOT,\
+  L_CTRL    , _________ , TO(ALPHA) , _________ , _________ , _________ ,                                      MINUS   ,  KC_4     ,  KC_5     ,  KC_6     , _________ , CTRL_QUOT,\
   L_SHIFT   , _________ , _________ , _________ , _________ , _________ , ____ , ____ ,         ____ ,  ____ , PLUS    ,  KC_1     ,  KC_2     ,  KC_3     ,  DECIMAL  ,  R_SHIFT ,\
-                               ALPHA   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,        BACKSPACE,   SPACE,     ZERO  ,  RIGHT_ALT   ,  ALPHA                                 \
+                               HYPER   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,        BACKSPACE,   SPACE,     ZERO  ,  RIGHT_ALT   ,  HYPER                                 \
   )
 
 #define SYMBOL_KEYS LAYOUT( \
   CAPSLOCK  , _________ , _________ , _________ , _________ , _________ ,                                      BACKTICK, AMPERSAND ,  ASTERISK ,  TILDE    , _________ , NUMLOCK  ,\
-  L_CTRL    , _________ , _________ , _________ ,TRANSPARENT, _________ ,                                      MINUS   ,  DOLLAR   ,  PERCENT  ,  CARET    ,  PIPE     , CTRL_QUOT,\
+  L_CTRL    , _________ , _________ , _________ ,  TO(ALPHA), _________ ,                                      MINUS   ,  DOLLAR   ,  PERCENT  ,  CARET    ,  PIPE     , CTRL_QUOT,\
   L_SHIFT   , _________ , _________ , _________ , _________ , _________ , ____ , ____ ,         ____ ,  ____ ,UNDERLINE,  BANG     ,  AT_SIGN  ,  HASH     , BACKSLASH ,  R_SHIFT ,\
-                                ALPHA   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  ALPHA                                 \
+                                HYPER   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  HYPER                                 \
   )
 
 #define PARENS_KEYS LAYOUT( \
   CAPSLOCK  , _________ , _________ , L_BRACKET , R_BRACKET , _________ ,                                    _________ , _________ , _________ , _________ , _________ , NUMLOCK  ,\
-  L_CTRL    , _________ , LESS_THAN ,  L_PAREN  ,  R_PAREN  , MORE_THAN ,                                    _________ ,TRANSPARENT, _________ , _________ , _________ , CTRL_QUOT,\
+  L_CTRL    , _________ , LESS_THAN ,  L_PAREN  ,  R_PAREN  , MORE_THAN ,                                    _________ , TO(ALPHA) , _________ , _________ , _________ , CTRL_QUOT,\
   L_SHIFT   , _________ , _________ ,  L_CURLY  ,  R_CURLY  , _________ , PREV , ____ ,         ____ ,  ____ ,_________, _________ , _________ , _________ , _________ ,  R_SHIFT ,\
-                                 ALPHA   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  ALPHA                                \
+                                 HYPER   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  HYPER                                \
   )
 
 #define NAVIGATION_KEYS LAYOUT( \
   CAPSLOCK  , _________ , _________ , _________ , _________ , _________ ,                                     _________ ,  RESET    , _________ , _________ , _________ , NUMLOCK  ,\
-  L_CTRL    , _________ , _________ ,TRANSPARENT, _________ , _________ ,                                     KC_LEFT   ,  KC_DOWN  ,  KC_UP    ,  KC_RIGHT , _________ , CTRL_QUOT,\
+  L_CTRL    , _________ , _________ , TO(ALPHA) , _________ , _________ ,                                     KC_LEFT   ,  KC_DOWN  ,  KC_UP    ,  KC_RIGHT , _________ , CTRL_QUOT,\
   L_SHIFT   , _________ , _________ , _________ , _________ , _________ , ____ , ____ ,         ____ ,  ____ ,_________ , _________ , _________ , _________ , _________ ,  R_SHIFT ,\
-                                 ALPHA   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  ALPHA                                 \
+                                 HYPER   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  HYPER                                 \
   ) 
 
 
