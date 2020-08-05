@@ -36,7 +36,6 @@
 #define F_SYMBOLS LT(SYMBOLS, KC_F)
 #define J_PARENS LT(PARENS, KC_J)
 #define K_NAV LT(NAVIGATION, KC_K)
-#define L_NUMBERS LT(NUMBERS, KC_L)
 
 // numbers layer symbols
 #define PLUS KC_PLUS
