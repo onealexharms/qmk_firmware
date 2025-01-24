@@ -37,7 +37,7 @@
 #define J_PARENS LT(PARENS, KC_J)
 #define K_NAV LT(NAVIGATION, KC_K)
 
-// numbers layer symbols
+// numbers and minecraft layer
 #define PLUS KC_PLUS
 #define MINUS KC_MINUS
 #define DIVIDE KC_SLASH
@@ -97,22 +97,22 @@ enum layers {
 #define ALPHA_KEYS LAYOUT( \
   CAPSLOCK  ,     KC_Q  ,     KC_W  ,     KC_E  ,     KC_R  ,     KC_T  ,                                      KC_Y    ,     KC_U  ,     KC_I  ,     KC_O  ,     KC_P  , NUMLOCK  ,\
   L_CTRL    ,     KC_A  ,S_NUMBERS  ,    D_NAV  , F_SYMBOLS ,     KC_G  ,                                      KC_H    , J_PARENS  ,     KC_K  ,     KC_L  , SEMICOLON , CTRL_QUOT,\
-  L_SHIFT   ,     KC_Z  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  , PLAY_PAUSE, NEXT,   VOL_DN , VOL_UP, KC_N    ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_SHIFT ,\
-                               KC_MEH   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,        BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  KC_MEH                               \
+  L_SHIFT   ,     KC_Z  ,     KC_X  ,     KC_C  ,     KC_V  ,     KC_B  , PLAY_PAUSE, NEXT,    VOL_DN ,VOL_UP, KC_N    ,     KC_M  , KC_COMMA  ,   PERIOD  , KC_SLASH  ,  R_SHIFT ,\
+                               KC_MEH   ,  LEFT_ALT , L_CMD_ESC,          ENTER, TAB  ,         BACKSPACE,  SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  KC_MEH                              \
   )
 
 #define NUMBER_KEYS LAYOUT(\
-  CAPSLOCK  ,     KC_A  ,    KC_W   , _________ , _________ , _________ ,                                      EQUAL   ,  KC_7     ,  KC_8     ,  KC_9     , _________ , NUMLOCK  ,\
-  L_CTRL    , _________ ,    KC_S   ,    KC_D   , _________ , _________ ,                                      MINUS   ,  KC_4     ,  KC_5     ,  KC_6     , _________ ,  TAB     ,\
-  L_SHIFT   , _________ , _________ , _________ , _________ , _________ , ____ , ____ ,         ____ ,  ____ , PLUS    ,  KC_1     ,  KC_2     ,  KC_3     ,  DECIMAL  ,  ENTER   ,\
-                               KC_MEH   ,  LEFT_ALT , L_CMD_ESC,       SPACE   , TAB  ,     BACKSPACE,   SPACE,     ZERO  ,  RIGHT_ALT   ,  KC_MEH                                 \
+  KC_ESC    ,   KC_TAB  ,   KC_LEFT ,    KC_E   ,  KC_RIGHT ,   KC_T    ,                                      EQUAL   ,  KC_7     ,  KC_8     ,  KC_9     , _________ , NUMLOCK  ,\
+  L_CTRL    , L_BRACKET ,    KC_A   ,    KC_W   ,    KC_D   , R_BRACKET ,                                      MINUS   ,  KC_4     ,  KC_5     ,  KC_6     , _________ ,  TAB     ,\
+  L_SHIFT   ,   KC_Z    ,    KC_Q   ,    KC_S   , _________ , _________ , ____  ,   KC_B  ,      ____ , ____ , PLUS    ,  KC_1     ,  KC_2     ,  KC_3     ,  DECIMAL  ,  ENTER   ,\
+                                      _________ ,  LEFT_ALT ,    KC_X   , SPACE ,   KC_Y  ,      BACKSPACE, ENTER,     ZERO  ,  RIGHT_ALT   ,  KC_MEH                              \
     )
 
 #define SYMBOL_KEYS LAYOUT( \
   CAPSLOCK  , _________ , _________ , _________ , _________ , _________ ,                                      BACKTICK, AMPERSAND ,  ASTERISK ,  TILDE    , _________ , NUMLOCK  ,\
   L_CTRL    , _________ , _________ , _________ ,  TO(ALPHA), _________ ,                                      MINUS   ,  DOLLAR   ,  PERCENT  ,  CARET    ,  PIPE     , CTRL_QUOT,\
   L_SHIFT   , _________ , _________ , _________ , _________ , _________ , ____ , ____ ,         ____ ,  ____ ,UNDERLINE,  BANG     ,  AT_SIGN  ,  HASH     , BACKSLASH ,  R_SHIFT ,\
-                                KC_MEH   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,       BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  KC_MEH                               \
+                                KC_MEH   ,  LEFT_ALT , L_CMD_ESC,       ENTER  , TAB  ,        BACKSPACE,   SPACE,  R_CMD_ESC,  RIGHT_ALT   ,  KC_MEH                              \
   )
 
 #define PARENS_KEYS LAYOUT( \
